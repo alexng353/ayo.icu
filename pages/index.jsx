@@ -1,9 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Button } from '@mui/material'
-import Lipsum from './lipsum.json'
-import Footer from './components/footer'
-import Navbar from './components/navbar'
+import { Button, TextField } from '@mui/material'
+import Footer from './share/footer'
+import Navbar from './share/navbar'
+import BubbleWrap from './components/bubblewrap'
+import LoremIpsum from './components/lipsum'
+
 
 
 function Home() {
@@ -14,16 +16,23 @@ function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar />
-			<main className='mb-12 mt-10'>
+			<main className='mb-20 mt-10'>
 				<div className='flex justify-center'>
 					<div className='w-3/5 text-justify'>
-						{Lipsum.lipsum.map((item, index) => {
-							return <div key={index}><p key={index}>{item}</p> <br/> </div>
-						})}
+
+                        <LoremIpsum />
+
 						<Button variant='outlined' onClick={() => {console.log("hello world!")}}> Hello World </Button>
+
+
+                        <BubbleWrap many={100}/>
+
+                        {/* {[...Array(10).keys()].map((number) => {return <Button key={number.toString()}>{number} </Button>})} */}
 						
 					</div>
-					
+
+
+                    
 				</div>
 				<Footer />
 			</main>
