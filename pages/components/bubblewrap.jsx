@@ -52,22 +52,45 @@ function Test2(props) {
 }
 
 //functional component using for and push
-function BubbleWrap(props) {
+function BubbleWrap({many, button = "toggle", toggle = true}) {
     let [showMessage, setShowMessage] = React.useState(false);
+
     var newlist = [];
-    for (var i = 1; i < props.many; i++) {
+    for (var i = 1; i <= many; i++) {
     newlist.push(i);
     }
+
+    function useButton () {
+        if (toggle) { 
+            return (
+            <div>
+                <Button variant='outlined' onClick={() => {setShowMessage(!showMessage)}}> {button} </Button>
+                { showMessage && (<div>{newlist.map((number) => {return <Button key={number.toString()} onClick={
+                    () => {
+                    const music = new Audio('/pop2_n6kdMwA.mp3')
+                    music.volume = 0.1
+                    music.play()
+                    }
+                    }>{number} </Button>})}</div>) }
+            </div>
+        );
+        } else {
+            return(
+                <div>{newlist.map((number) => {return <Button key={number.toString()} onClick={
+                    () => {
+                    const music = new Audio('/pop2_n6kdMwA.mp3')
+                    music.volume = 0.1
+                    music.play()
+                    }
+                    }>{number} </Button>})}
+                </div>
+            )
+        }
+    }
+
     return (
         <div>
-            <Button variant='outlined' onClick={() => {setShowMessage(!showMessage)}}> toggle </Button>
-            { showMessage && (<div>{newlist.map((number) => {return <Button key={number.toString()} onClick={
-                () => {
-                const music = new Audio('/pop2_n6kdMwA.mp3')
-                music.volume = 0.1
-                music.play()
-                }
-                }>{number} </Button>})}</div>) }
+            {useButton()}
         </div>
     )
 }

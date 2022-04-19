@@ -27,8 +27,6 @@ function Home() {
 
                         <BubbleWrap many={100}/>
 
-                        <Test4 greeting="hello" name="world"/>
-
 						
 					</div>
 				</div>
