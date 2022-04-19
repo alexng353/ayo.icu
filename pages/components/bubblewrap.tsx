@@ -88,42 +88,7 @@ interface BubbleWrapProps {
 function BubbleWrap({ many, toggle=false, text="toggle" }: BubbleWrapProps) {
 	const [showMessage, setShowMessage] = useState(false);
 
-	if (toggle) {
-		return (
-			<div>
-				<Button
-					variant='outlined'
-					onClick={() => {
-						setShowMessage(!showMessage);
-					}}
-				>
-					{" "}
-					{text}
-					{" "}
-				</Button>
-				{showMessage ? (
-					<div>
-						{Array(many)
-							.fill(1)
-							.map((_, number) => {
-								return (
-									<Button
-										key={number}
-										onClick={() => {
-											const music = new Audio("/pop2_n6kdMwA.mp3");
-											music.volume = 0.1;
-											music.play();
-										}}
-									>
-										{number + 1}{" "}
-									</Button>
-								);
-							})}
-					</div>
-				) : null}
-			</div>
-			);
-	} else {
+	function generator ()  {
 		return (
 			<div>
 				{Array(many)
@@ -142,6 +107,30 @@ function BubbleWrap({ many, toggle=false, text="toggle" }: BubbleWrapProps) {
 							</Button>
 						);
 					})}
+			</div>
+		);
+	}
+
+	if (toggle) {
+		return (
+			<div>
+				<Button
+					variant='outlined'
+					onClick={() => {
+						setShowMessage(!showMessage);
+					}}
+				>
+					{" "}
+					{text}
+					{" "}
+				</Button>
+				{showMessage && generator()}
+			</div>
+			);
+	} else {
+		return (
+			<div>
+				{generator()}
 			</div>
 		);
 	}
