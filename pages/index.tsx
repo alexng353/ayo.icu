@@ -30,7 +30,7 @@ function Home() {
               Hello World{" "}
             </Button>
 
-            <BubbleWrap many={100} />
+            <BubbleWrap many={100}/>
 
             <Test4 greeting="hello" name="world" />
           </div>

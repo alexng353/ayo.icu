@@ -78,43 +78,73 @@ function Test2({ many }: { many: number }) {
 	);
 }
 
+interface BubbleWrapProps {
+	many: number;
+	toggle: boolean;
+	text: string;
+}
+
 //functional component using for and push
-function BubbleWrap({ many }: { many: number }) {
+function BubbleWrap({ many, toggle=false, text="toggle" }: BubbleWrapProps) {
 	const [showMessage, setShowMessage] = useState(false);
 
-	return (
-		<div>
-			<Button
-				variant='outlined'
-				onClick={() => {
-					setShowMessage(!showMessage);
-				}}
-			>
-				{" "}
-				toggle{" "}
-			</Button>
-			{showMessage ? (
-				<div>
-					{Array(Math.abs(many - 1))
-						.fill(1)
-						.map((_, number) => {
-							return (
-								<Button
-									key={number}
-									onClick={() => {
-										const music = new Audio("/pop2_n6kdMwA.mp3");
-										music.volume = 0.1;
-										music.play();
-									}}
-								>
-									{number + 1}{" "}
-								</Button>
-							);
-						})}
-				</div>
-			) : null}
-		</div>
-	);
+	if (toggle) {
+		return (
+			<div>
+				<Button
+					variant='outlined'
+					onClick={() => {
+						setShowMessage(!showMessage);
+					}}
+				>
+					{" "}
+					{text}
+					{" "}
+				</Button>
+				{showMessage ? (
+					<div>
+						{Array(many)
+							.fill(1)
+							.map((_, number) => {
+								return (
+									<Button
+										key={number}
+										onClick={() => {
+											const music = new Audio("/pop2_n6kdMwA.mp3");
+											music.volume = 0.1;
+											music.play();
+										}}
+									>
+										{number + 1}{" "}
+									</Button>
+								);
+							})}
+					</div>
+				) : null}
+			</div>
+			);
+	} else {
+		return (
+			<div>
+				{Array(many)
+					.fill(1)
+					.map((_, number) => {
+						return (
+							<Button
+								key={number}
+								onClick={() => {
+									const music = new Audio("/pop2_n6kdMwA.mp3");
+									music.volume = 0.1;
+									music.play();
+								}}
+							>
+								{number + 1}{" "}
+							</Button>
+						);
+					})}
+			</div>
+		);
+	}
 }
 
 export default BubbleWrap;
