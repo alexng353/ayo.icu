@@ -75,7 +75,10 @@ export default function MenuListComposition() {
                             aria-labelledby="composition-button"
                             onKeyDown={handleListKeyDown}
                         >
-                            <MenuItem onClick={(e) => {window.location.href = '/about'; handleClose(e);}}>Wow</MenuItem>
+                            <MenuItem onClick={(e) => {
+                                window.location.href = '/about'
+                                handleClose(e);
+                                }}>Wow</MenuItem>
                             <MenuItem onClick={handleClose}>Such Cool</MenuItem>
                             <MenuItem onClick={handleClose}>Dropdown</MenuItem>
                         </MenuList>
