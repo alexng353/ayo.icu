@@ -5,7 +5,7 @@ import Footer from "../share/footer";
 
 export default function Flatypus() {
     return (
-        <div>
+        <>
             <Head>
                 <title>Alex | ayo.icu</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -35,6 +35,6 @@ export default function Flatypus() {
                 </div>
             </main>
             <Footer />
-        </div>
+        </>
     );
 }

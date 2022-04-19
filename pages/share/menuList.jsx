@@ -39,55 +39,55 @@ export default function MenuListComposition() {
 
     return (
         <Stack direction="row" spacing={2}>
-        <div>
-            <Button
-            ref={anchorRef}
-            id="composition-button"
-            aria-controls={open ? 'composition-menu' : undefined}
-            aria-expanded={open ? 'true' : undefined}
-            aria-haspopup="true"
-            onClick={handleToggle}
-            variant="outlined"
-            >
-            menu
-            </Button>
-            <Popper
-            open={open}
-            anchorEl={anchorRef.current}
-            role={undefined}
-            placement="bottom-start"
-            transition
-            disablePortal
-            >
-            {({ TransitionProps, placement }) => (
-                <Grow
-                {...TransitionProps}
-                style={{
-                    transformOrigin:
-                    placement === 'bottom-start' ? 'left top' : 'left bottom',
-                }}
+            <div>
+                <Button
+                ref={anchorRef}
+                id="composition-button"
+                aria-controls={open ? 'composition-menu' : undefined}
+                aria-expanded={open ? 'true' : undefined}
+                aria-haspopup="true"
+                onClick={handleToggle}
+                variant="outlined"
                 >
-                <Paper>
-                    <ClickAwayListener onClickAway={handleClose}>
-                    <MenuList
-                        autoFocusItem={open}
-                        id="composition-menu"
-                        aria-labelledby="composition-button"
-                        onKeyDown={handleListKeyDown}
+                menu
+                </Button>
+                <Popper
+                open={open}
+                anchorEl={anchorRef.current}
+                role={undefined}
+                placement="bottom-start"
+                transition
+                disablePortal
+                >
+                {({ TransitionProps, placement }) => (
+                    <Grow
+                    {...TransitionProps}
+                    style={{
+                        transformOrigin:
+                        placement === 'bottom-start' ? 'left top' : 'left bottom',
+                    }}
                     >
-                        <MenuItem onClick={(e) => {
-                            new Audio('/pop2_n6kdMwA.mp3').play()
-                            handleClose(e);
-                            }}>Wow</MenuItem>
-                        <MenuItem onClick={handleClose}>Such Cool</MenuItem>
-                        <MenuItem onClick={handleClose}>Dropdown</MenuItem>
-                    </MenuList>
-                    </ClickAwayListener>
-                </Paper>
-                </Grow>
-            )}
-            </Popper>
-        </div>
+                    <Paper>
+                        <ClickAwayListener onClickAway={handleClose}>
+                        <MenuList
+                            autoFocusItem={open}
+                            id="composition-menu"
+                            aria-labelledby="composition-button"
+                            onKeyDown={handleListKeyDown}
+                        >
+                            <MenuItem onClick={(e) => {
+                                window.location.href = '/about'
+                                handleClose(e);
+                                }}>Wow</MenuItem>
+                            <MenuItem onClick={handleClose}>Such Cool</MenuItem>
+                            <MenuItem onClick={handleClose}>Dropdown</MenuItem>
+                        </MenuList>
+                        </ClickAwayListener>
+                    </Paper>
+                    </Grow>
+                )}
+                </Popper>
+            </div>
         </Stack>
     );
 }

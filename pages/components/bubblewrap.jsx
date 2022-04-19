@@ -63,7 +63,9 @@ function BubbleWrap(props) {
             <Button variant='outlined' onClick={() => {setShowMessage(!showMessage)}}> toggle </Button>
             { showMessage && (<div>{newlist.map((number) => {return <Button key={number.toString()} onClick={
                 () => {
-                new Audio('/pop2_n6kdMwA.mp3').play()
+                const music = new Audio('/pop2_n6kdMwA.mp3')
+                music.volume = 0.1
+                music.play()
                 }
                 }>{number} </Button>})}</div>) }
         </div>

@@ -5,12 +5,13 @@ import Footer from './share/footer'
 import Navbar from './share/navbar'
 import BubbleWrap from './components/bubblewrap'
 import LoremIpsum from './components/lipsum'
+import Test4 from './test'
 
 
 
 function Home() {
 	return (
-		<div>
+		<>
 			<Head>
 				<title>Home</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -24,21 +25,17 @@ function Home() {
 
 						<Button variant='outlined' onClick={() => {console.log("hello world!")}}> Hello World </Button>
 
-
                         <BubbleWrap many={100}/>
 
-                        {/* {[...Array(10).keys()].map((number) => {return <Button key={number.toString()}>{number} </Button>})} */}
+                        <Test4 greeting="hello" name="world"/>
+
 						
 					</div>
-
-
-                    
 				</div>
 				<Footer />
 			</main>
-		</div>
-		
-		)
+		</>
+	)
 }
 
 export default Home

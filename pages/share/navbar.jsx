@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { AppBar, Toolbar, Typography, Button } from "@mui/material";
 import Demo from "./menuList";
+import Link from "next/link";
 
 class Navbar extends Component {
     render() {
@@ -14,7 +15,13 @@ class Navbar extends Component {
                                         <a href="https://dev.ayo.icu" className="underline hover:no-underline">Ayo ICU</a>
                                         
                                     </Typography>
-                                    <a href="/about" className="underline text-white hover:no-underline">About</a>
+                                    <div className="underline text-white hover:no-underline">
+                                        <Link href="/about">About</Link>
+                                        
+                                    </div> 
+                                    {/* <a href="/about" className="underline text-white hover:no-underline">About</a> */}
+                                    
+
                                     &nbsp;
                                     &nbsp;
                                     <Demo />
