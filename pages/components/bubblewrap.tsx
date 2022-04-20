@@ -1,82 +1,7 @@
 import { Button } from "@mui/material";
 import { Component, useState } from "react";
 
-const styles = {
-	fontFamily: "sans-serif",
-	textAlign: "center",
-};
-
-// class based component with no props
-class Test extends Component {
-	constructor(props: {}) {
-		super(props);
-		this.state = { showMessage: false };
-	}
-	state: { showMessage: boolean };
-
-	_showMessage = (bool) => {
-		this.setState({
-			showMessage: bool,
-		});
-	};
-
-	render() {
-		return (
-			<div>
-				<Button
-					variant='outlined'
-					onClick={this._showMessage.bind(null, !this.state.showMessage)}
-				>
-					{" "}
-					toggle{" "}
-				</Button>
-
-				{this.state.showMessage && (
-					<div>
-						{[...Array(100)].map((number) => {
-							return <Button key={number.toString()}>{number} </Button>;
-						})}
-					</div>
-				)}
-			</div>
-		);
-	}
-}
-
-// functional component with props
-function Test2({ many }: { many: number }) {
-	let [showMessage, setShowMessage] = useState(false);
-
-	return (
-		<div>
-			<Button
-				variant='outlined'
-				onClick={() => {
-					setShowMessage(!showMessage);
-				}}
-			>
-				{" "}
-				toggle{" "}
-			</Button>
-			{showMessage && (
-				<div>
-					{[...Array(many)].map((number) => {
-						return (
-							<Button
-								key={number.toString()}
-								onClick={() => {
-									new Audio("/pop2_n6kdMwA.mp3").play();
-								}}
-							>
-								{number + 1}{" "}
-							</Button>
-						);
-					})}
-				</div>
-			)}
-		</div>
-	);
-}
+// interface is a thing that describes the shape of a function in typescript
 
 interface BubbleWrapProps {
 	many: number;
@@ -85,6 +10,10 @@ interface BubbleWrapProps {
 }
 
 //functional component using for and push
+// can receive many, toggle and text
+// many is the number of buttons to generate
+// toggle is whether or not it can be hidden by a user
+// text is what the toggle shows
 function BubbleWrap({ many, toggle=false, text="toggle" }: BubbleWrapProps) {
 	const [showMessage, setShowMessage] = useState(false);
 
@@ -120,9 +49,7 @@ function BubbleWrap({ many, toggle=false, text="toggle" }: BubbleWrapProps) {
 						setShowMessage(!showMessage);
 					}}
 				>
-					{" "}
 					{text}
-					{" "}
 				</Button>
 				{showMessage && generator()}
 			</div>

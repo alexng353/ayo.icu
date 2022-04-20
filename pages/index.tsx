@@ -30,9 +30,19 @@ function Home() {
               Hello World{" "}
             </Button>
 
-            <BubbleWrap many={100}/>
+            <br />
+            
+            <div>
+            <TextField
+              id="textfield"
+              label="How many buttons?"
+              type="number"
+              onChange={console.log(e.target.value)}
+            />
+            </div>
 
-            <Test4 greeting="hello" name="world" />
+            <BubbleWrap many={100} toggle={true} text="show bubbles"/>
+
           </div>
         </div>
         <Footer />
