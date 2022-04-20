@@ -37,7 +37,9 @@ function Home() {
               id="textfield"
               label="How many buttons?"
               type="number"
-              onChange={console.log(e.target.value)}
+              onChange={(e) => {
+                console.log(e.target.value);
+                }}
             />
             </div>
 
