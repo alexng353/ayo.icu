@@ -45,7 +45,7 @@ export default function MenuListComposition() {
 		}
 
 		setPrevOpen(open);
-	}, [open]);
+	}, [open, prevOpen]);
 
 	return (
 		<Stack direction='row' spacing={2}>
@@ -90,10 +90,11 @@ export default function MenuListComposition() {
 												window.location.href = "/about";
 												handleClose();
 											}}
-										>
-											Wow
-										</MenuItem>
-										<MenuItem onClick={handleClose}>Such Cool</MenuItem>
+										>About</MenuItem>
+										<MenuItem onClick={(e) => {
+												window.location.href = "/crasher";
+												handleClose();
+											}}>Crash Browser With Buttons</MenuItem>
 										<MenuItem onClick={handleClose}>Dropdown</MenuItem>
 									</MenuList>
 								</ClickAwayListener>

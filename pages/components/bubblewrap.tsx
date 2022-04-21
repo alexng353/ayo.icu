@@ -6,7 +6,7 @@ import { Component, useState } from "react";
 interface BubbleWrapProps {
 	many: number;
 	toggle: boolean;
-	text: string;
+	text?: string;
 }
 
 //functional component using for and push
@@ -38,6 +38,7 @@ function BubbleWrap({ many, toggle=false, text="toggle" }: BubbleWrapProps) {
 					})}
 			</div>
 		);
+		
 	}
 
 	if (toggle) {
@@ -55,11 +56,11 @@ function BubbleWrap({ many, toggle=false, text="toggle" }: BubbleWrapProps) {
 			</div>
 			);
 	} else {
-		return (
-			<div>
-				{generator()}
-			</div>
-		);
+		if (many > 0) {
+			return generator();
+		} else {
+			return <div> </div>;
+		}
 	}
 }
 

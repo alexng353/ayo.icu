@@ -6,8 +6,10 @@ import Navbar from "./share/navbar";
 import BubbleWrap from "./components/bubblewrap";
 import LoremIpsum from "./components/lipsum";
 import Test4 from "./test";
+import { useState } from "react";
 
 function Home() {
+  const [many, setMany] = useState(0);
   return (
     <>
       <Head>
@@ -30,21 +32,23 @@ function Home() {
               Hello World{" "}
             </Button>
 
-            <br />
             
             <div>
+              <br />
+
             <TextField
               id="textfield"
-              label="How many buttons?"
+              label="Generate buttons"
+              helperText="Won't make more than 9999 buttons"
               type="number"
               onChange={(e) => {
-                console.log(e.target.value);
-                }}
-            />
+                if (parseInt(e.target.value) <= 9999) {
+                setMany(parseInt(e.target.value));
+                } else {
+                  setMany(9999);
+                }}}/>
+            <BubbleWrap many={many} toggle={false}/>
             </div>
-
-            <BubbleWrap many={100} toggle={true} text="show bubbles"/>
-
           </div>
         </div>
         <Footer />
