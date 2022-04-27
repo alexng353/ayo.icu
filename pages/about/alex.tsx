@@ -2,7 +2,11 @@ import Head from "next/head";
 import Footer from "../share/footer";
 import Navbar from "../share/navbar";
 
-export default function Flatypus() {
+import Icon from "@mui/material/Icon";
+
+import { GitHub, Twitter, ChatBubble } from "@mui/icons-material";
+
+function Flatypus() {
 	return (
 		<>
 			<Head>
@@ -10,37 +14,34 @@ export default function Flatypus() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Navbar />
-			<main className='mb-20 mt-10'>
+			<div className='mb-20 mt-10'>
 				<div className='flex justify-center'>
-					<div className='w-3/5 text-justify'>
-						<h1 className='text-3xl'>Alex</h1>
-						<p>
-							This is a simple{" "}
-							<a
-								href='https://nextjs.org/docs'
-								className='underline text-blue-600 hover:no-underline'
-							>
-								Next.js
-							</a>{" "}
-							project that uses the{" "}
-							<a
-								className='underline text-blue-600 hover:no-underline'
-								href='
-                                https://material-ui.com/'
-							>
-								Material-UI
-							</a>{" "}
-							library.
-						</p>
-						<p>
-							I use this project to learn more about Next.js and javascript.
-						</p>
-						<p>I also use it to host my personal projects</p>
-						<br />
+					<div className='w-2/5'>
+						<div className='text-center'>
+							<a href='https://github.com/alexng353' target='_blank' rel='noopener noreferrer'><GitHub style={{color: "white"}}/></a>
+							<a href='https://twitter.com/alexng353' target='_blank' rel='noopener noreferrer' > <Twitter style={{color: "white"}}/></a>
+							<a href='https://discord.gg/' target='_blank' rel='noopener noreferrer'><ChatBubble style={{color: "white"}}/></a>
+
+							<h1 className='text-3xl text-white'>Hey, I&apos;m <a className="text-3xl text-blue-500" href="https://twitter.com/alexng353">Alex</a> </h1>
+							<p className='text-gray-400'>
+								student, aspiring full-stack developer, and <span className="text-blue-500">gamer</span>.
+							</p>
+							<br />
+						</div>
+						<div className='text-justify text-gray-400'>
+							<p>
+								I&apos;m a <span className="text-blue-500">high school</span> student in Vancouver, Canada.
+								And I&apos;m a <span className="text-blue-500">gamer</span> and <span className="text-blue-500">developer</span> who loves to learn new things.
+							</p>
+							<div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</main>
+			</div>
 			<Footer />
 		</>
 	);
 }
+
+export default Flatypus;

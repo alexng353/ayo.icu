@@ -95,7 +95,10 @@ export default function MenuListComposition() {
 												window.location.href = "/crasher";
 												handleClose();
 											}}>Crash Browser With Buttons</MenuItem>
-										<MenuItem onClick={handleClose}>Dropdown</MenuItem>
+										<MenuItem onClick={(e) => {
+												window.location.href = "/tip-calculator";
+												handleClose();
+											}}>Tip Calculator</MenuItem>
 									</MenuList>
 								</ClickAwayListener>
 							</Paper>

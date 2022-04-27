@@ -3,11 +3,9 @@ import Image from "next/image";
 import { Button, TextField } from "@mui/material";
 import Footer from "./share/footer";
 import Navbar from "./share/navbar";
-import BubbleWrap from "./components/bubblewrap";
-import LoremIpsum from "./components/lipsum";
-import Test4 from "./test";
+import BubbleWrap from "../components/bubblewrap";
+import LoremIpsum from "../components/lipsum";
 import { useState } from "react";
-
 function Home() {
   const [many, setMany] = useState(0);
   return (
@@ -20,8 +18,6 @@ function Home() {
       <main className="mb-20 mt-10">
         <div className="flex justify-center">
           <div className="w-3/5 text-justify">
-            <LoremIpsum />
-
             <Button
               variant="outlined"
               onClick={() => {
@@ -32,22 +28,22 @@ function Home() {
               Hello World{" "}
             </Button>
 
-            
             <div>
               <br />
 
-            <TextField
-              id="textfield"
-              label="Generate buttons"
-              helperText="Won't make more than 9999 buttons"
-              type="number"
-              onChange={(e) => {
-                if (parseInt(e.target.value) <= 9999) {
-                setMany(parseInt(e.target.value));
-                } else {
-                  setMany(9999);
-                }}}/>
-            <BubbleWrap many={many} toggle={false}/>
+              <TextField
+                id="textfield"
+                label="Generate buttons"
+                helperText="Won't make more than 9999 buttons"
+                type="number"
+                onChange={(e) => {
+                  if (parseInt(e.target.value) <= 9999) {
+                  setMany(parseInt(e.target.value));
+                  } else {
+                    setMany(9999);
+                  }}}/>
+              <BubbleWrap many={many} toggle={false}/>
+
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import BubbleWrap from "../components/bubblewrap";
+import BubbleWrap from "../../components/bubblewrap";
 import Head from "next/head";
 import Button from "@mui/material/Button";
 

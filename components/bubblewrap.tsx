@@ -41,20 +41,34 @@ function BubbleWrap({ many, toggle=false, text="toggle" }: BubbleWrapProps) {
 		
 	}
 
-	if (toggle) {
+	function toggleButton() {
 		return (
-			<div>
-				<Button
-					variant='outlined'
-					onClick={() => {
-						setShowMessage(!showMessage);
-					}}
-				>
-					{text}
-				</Button>
-				{showMessage && generator()}
-			</div>
+			<Button
+				variant='outlined'
+				onClick={() => {
+					setShowMessage(!showMessage);
+				}}
+			>
+				{text}
+			</Button>
+		);
+	}
+
+	if (toggle) {
+		if (many > 0) {
+			return (
+				<div>
+					{toggleButton()}
+					{showMessage && generator()}
+				</div>
 			);
+		} else {
+			return (
+				<div>
+					{toggleButton()}
+				</div>
+			)
+		}
 	} else {
 		if (many > 0) {
 			return generator();
