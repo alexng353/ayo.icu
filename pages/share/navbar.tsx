@@ -15,7 +15,7 @@ class DeprecatedNavbar extends Component {
 							<Toolbar>
 								<Typography variant='h6' color='inherit' className='mr-auto'>
 									<a
-										href='https://dev.ayo.icu'
+										href='https://ayo.icu'
 										className='underline hover:no-underline'
 									>
 										Ayo ICU
@@ -45,7 +45,7 @@ function Navbar() {
 						<Toolbar>
 							<Typography variant='h6' color='inherit' className='mr-auto'>
 								<a
-									href='https://dev.ayo.icu'
+									href='https://ayo.icu'
 									className='underline hover:no-underline'
 								>
 									Ayo ICU

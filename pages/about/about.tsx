@@ -1,9 +1,14 @@
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 import Head from "next/head";
 import Footer from "../share/footer";
 import Navbar from "../share/navbar";
+import { useRouter } from "next/router";
+
+import { GreenButton as Button } from '../../components/styled-mui';
+
 
 function About() {
+	const router = useRouter()
 	return (
 		<div>
 			<Head>
@@ -14,7 +19,7 @@ function About() {
 			<main className='mb-20 mt-10'>
 				<div className='flex justify-center'>
 					<div className='w-3/5 text-justify'>
-						<h1 className='text-3xl'>About</h1>
+						<h1 className='text-3xl text-white'>About</h1>
 						<p>
 							This is a simple{" "}
 							<a
@@ -51,12 +56,14 @@ function About() {
 								<Button
 									variant='outlined'
 									color='primary'
-									href='/about/flatypus'
+									onClick={()=>{
+										router.push("/about/flatypus")
+									}}
 								>
 									flatypus
 								</Button>
 								&nbsp;
-								<Button variant='outlined' color='primary' href='/about/alex'>
+								<Button variant='outlined' color='primary' onClick={()=>{router.push('/about/alex')}}>
 									Alex
 								</Button>
 							</div>
