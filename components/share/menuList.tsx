@@ -1,5 +1,5 @@
 import {
-	Button,
+	// Button, 
 	ClickAwayListener,
 	Grow,
 	MenuItem,
@@ -9,6 +9,10 @@ import {
 	Stack,
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+
+import { GrayButton as Button } from '../styled-mui'
+
+// don't forget to make this into the json version of menulist
 
 export default function MenuListComposition() {
 	const [open, setOpen] = useState(false);
@@ -57,7 +61,6 @@ export default function MenuListComposition() {
 					aria-expanded={open ? "true" : undefined}
 					aria-haspopup='true'
 					onClick={handleToggle}
-					variant='outlined'
 				>
 					menu
 				</Button>
@@ -68,6 +71,7 @@ export default function MenuListComposition() {
 					placement='bottom-start'
 					transition
 					disablePortal
+					variant='filled'
 				>
 					{({ TransitionProps, placement }) => (
 						<Grow

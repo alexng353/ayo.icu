@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Footer from "../share/footer";
-import Navbar from "../share/navbar";
+import Footer from "../../components/share/footer";
+import Navbar from "../../components/share/navbar";
 
 export default function Flatypus() {
 	return (

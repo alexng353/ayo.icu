@@ -20,6 +20,24 @@ const GreenButton = styled(ButtonUnstyled)`
 }
 `
 
+const GrayButton = styled(ButtonUnstyled)`
+    font-family: IBM Plex Sans, sans-serif;
+    font-size: 0.95rem;
+    background-color: black;
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: 1px solid rgb(34 197 94);
+    color: white;
+    transition: all 150ms ease;
+    cursor: pointer;
+
+    &:hover {
+    background-color: black;
+    border: 1px solid yellow;
+    color: white;
+}
+`
+
 const GreenTextField = styled(TextField)({
     "& .MuiInputBase-root": {
       color: "rgb(255 255 255)"
@@ -51,5 +69,6 @@ const GreenTextField = styled(TextField)({
 
 export {
     GreenButton,
-    GreenTextField
+    GreenTextField,
+    GrayButton
 }

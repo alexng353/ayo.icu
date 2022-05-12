@@ -1,7 +1,8 @@
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
 import { Component } from "react";
-import Demo from "./menuList";
+import Menu from "./menuList";
+import styles from "../../styles/bar.module.css";
 
 // classical component is deprecated
 // use functional component instead
@@ -39,7 +40,7 @@ class DeprecatedNavbar extends Component {
 function Navbar() {
 	return (
 		<header>
-			<AppBar position='static' className="bg-gray-900">
+			<AppBar position='static' className={styles.navbar}>
 				<div className='flex justify-center'>
 					<div className='w-3/5 text-justify'>
 						<Toolbar>
@@ -48,14 +49,14 @@ function Navbar() {
 									href='https://ayo.icu'
 									className='underline hover:no-underline'
 								>
-									Ayo ICU
+									353
 								</a>
 							</Typography>
-							<div className='underline text-white hover:no-underline'>
+							<div className='underline hover:no-underline'>
 								<Link href='/about'>About</Link>
 							</div>
 							&nbsp; &nbsp;
-							<Demo />
+							<Menu />
 						</Toolbar>
 					</div>
 				</div>
