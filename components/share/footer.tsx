@@ -9,7 +9,7 @@ class Footer extends Component {
 				style={{ position: "fixed", bottom: 0, width: "100%" }}
 				className={styles.footer}
 			>
-				<div className='container mx-auto pt-4 pb-4 text-center text-gray-400'>
+				<div className='container mx-auto pt-4 pb-4 text-center'>
 					© ayo icu. All rights reserved.
 				</div>
 			</div>

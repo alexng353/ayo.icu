@@ -22,18 +22,19 @@ const GreenButton = styled(ButtonUnstyled)`
 
 const GrayButton = styled(ButtonUnstyled)`
     font-family: IBM Plex Sans, sans-serif;
-    font-size: 0.95rem;
+    font-size: 1rem;
     background-color: black;
     padding: 8px 24px;
     border-radius: 4px;
-    border: 1px solid rgb(34 197 94);
-    color: white;
-    transition: all 150ms ease;
+    border: 2px solid rgb(34 197 94);
+    color: black;
+    transition: all 200ms ease;
     cursor: pointer;
 
     &:hover {
     background-color: black;
-    border: 1px solid yellow;
+    font-size: 1rem;
+    border: 2px solid rgb(34 197 94);
     color: white;
 }
 `
