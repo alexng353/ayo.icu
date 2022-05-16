@@ -15,9 +15,8 @@ function InlineHref(props){
     )
 }
 
-export {
-    InlineHref
-};
+export default InlineHref
+
 export type { 
     InLineHrefProps 
 };

@@ -8,7 +8,7 @@ import { GreenButton } from '../../components/styled-mui';
 import Content from "../../components/content";
 import Link from "next/link";
 
-import { InlineHref } from '../../components/reuse';
+import InlineHref from '../../components/InlineHref';
 
 
 function About() {
