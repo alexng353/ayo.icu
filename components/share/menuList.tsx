@@ -10,6 +10,8 @@ import {
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
+import { MenuButton } from "../styled-mui";
+
 import { GrayButton as Button } from '../styled-mui'
 
 // don't forget to make this into the json version of menulist
@@ -54,7 +56,7 @@ export default function MenuListComposition() {
 	return (
 		<Stack direction='row' spacing={2}>
 			<div>
-				<Button
+				<MenuButton
 					ref={anchorRef}
 					id='composition-button'
 					aria-controls={open ? "composition-menu" : undefined}
@@ -63,7 +65,7 @@ export default function MenuListComposition() {
 					onClick={handleToggle}
 				>
 					menu
-				</Button>
+				</MenuButton>
 				<Popper
 					open={open}
 					anchorEl={anchorRef.current}
