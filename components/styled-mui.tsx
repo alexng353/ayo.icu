@@ -19,7 +19,24 @@ const GreenButton = styled(ButtonUnstyled)`
     color: white;
 }
 `
+// clear button, on hover background becomes gray and border becomes slightly lighter gray
+const NavButton = styled(ButtonUnstyled)`
+    font-family: IBM Plex Sans, sans-serif;
+    font-size: 0.95rem;
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 24px;
+    color: white;
+    transition: all 150ms ease;
+    cursor: pointer;
+    
+    &:hover {
+    background-color: gray;
+    color: white;
+}
 
+`
+//menulist button
 const GrayButton = styled(ButtonUnstyled)`
     font-family: IBM Plex Sans, sans-serif;
     font-size: 0.95rem;
@@ -70,5 +87,6 @@ const GreenTextField = styled(TextField)({
 export {
     GreenButton,
     GreenTextField,
-    GrayButton
+    GrayButton,
+    NavButton
 }

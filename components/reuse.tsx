@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
+import { NavButton } from './styled-mui';
 
 interface InLineHrefProps{
     link: string,
@@ -7,7 +8,7 @@ interface InLineHrefProps{
 
 function InlineHref(props){
     return(
-        <Link href={props.link}>
+        <Link href={props.href}>
             <a>
                 {props.children}
             </a>
@@ -15,8 +16,21 @@ function InlineHref(props){
     )
 }
 
+function NavLink(props){
+    return(
+        <Link href={props.href}>
+            <a>
+                <NavButton className=''>
+                    <span className='underline'>{props.children}</span>
+                </NavButton>
+            </a>
+        </Link>
+    )
+}
+
 export {
-    InlineHref
+    InlineHref,
+    NavLink
 };
 export type { 
     InLineHrefProps 
