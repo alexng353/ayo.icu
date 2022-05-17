@@ -21,7 +21,7 @@ const GreenButton = styled(ButtonUnstyled)`
 `
 // clear button, on hover background becomes gray and border becomes slightly lighter gray
 const NavButton = styled(ButtonUnstyled)`
-  font-family: IBM Plex Sans, sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: 0.95rem;
   background-color: transparent;
   padding: 8px 16px;
@@ -84,19 +84,20 @@ const GreenTextField = styled(TextField)({
 });
   
 const MenuButton = styled(ButtonUnstyled)`
+
   font-family: IBM Plex Sans, sans-serif;
   font-size: 0.95rem;
   background-color: rgb(34 197 94);
-  padding: 8px 16px;
-  border-radius: 24px;
-  border: 1px solid rgb(34 197 94);
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid white;
   color: white;
   transition: all 150ms ease;
   cursor: pointer;
   
   &:hover {
   background-color: green;
-  border: 1px solid yellow;
+  border: 1px solid white;
 }
 `
 

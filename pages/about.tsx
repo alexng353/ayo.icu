@@ -27,7 +27,7 @@ export default function About() {
 
             {/* generate 4 empty lines */}
             <br/><br/><br/><br/>
-            This site is for me to learn front end development and React.
+            This site is for me to learn front end development and React, and to showcase some of my favourite projects.
             
 
 

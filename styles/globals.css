@@ -1,8 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
 html {
     background-color: #000;
     color: #FFF;
+    /* font-family: 'Roboto Mono', monospace; */
 }

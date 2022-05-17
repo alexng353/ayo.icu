@@ -7,6 +7,8 @@ import Navbar from "../components/share/navbar";
 import { useState } from "react";
 import Content from "../components/content";
 import { GitHub, Twitter, ChatBubble } from "@mui/icons-material";
+
+
 function Home() {
   return (
     <>
@@ -19,12 +21,15 @@ function Home() {
         <a href='https://github.com/alexng353' target='_blank' rel='noopener noreferrer'><GitHub style={{color: "white"}}/></a>
         <a href='https://twitter.com/alexng353' target='_blank' rel='noopener noreferrer' > <Twitter style={{color: "white"}}/></a>
         <a href='/contact' target='_blank' rel='noopener noreferrer'><ChatBubble style={{color: "white"}}/></a>
-        <Typography variant="h1" component="h1">
+        {/* <Typography variant="h1" component="h1">
           Hey, I&apos;m Alex.
-        </Typography>
+        </Typography> */}
+        <h1 className="text-5xl md:">
+          Hey, I&apos;m Alex.
+        </h1>
+        <br />
         <div>
-
-          I&apos;m a student learning to code in Vancouver, Canada.
+          A High School student learning to code in Vancouver, Canada.
         </div>
       </Content>
       <Footer />

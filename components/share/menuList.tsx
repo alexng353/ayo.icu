@@ -12,7 +12,10 @@ import { useEffect, useRef, useState } from "react";
 
 import { MenuButton } from "../styled-mui";
 
-import { GrayButton as Button } from '../styled-mui'
+import MenuIcon from "@mui/icons-material/Menu";
+
+import menuItems from "./menuItems.json";
+
 
 // don't forget to make this into the json version of menulist
 
@@ -25,9 +28,9 @@ export default function MenuListComposition() {
 	};
 
 	const handleClose = () => {
-		if (anchorRef.current) {
-			return;
-		}
+		// if (anchorRef.current) {
+		// 	return;
+		// }
 
 		setOpen(false);
 	};
@@ -64,7 +67,7 @@ export default function MenuListComposition() {
 					aria-haspopup='true'
 					onClick={handleToggle}
 				>
-					menu
+					<MenuIcon />
 				</MenuButton>
 				<Popper
 					open={open}
@@ -73,7 +76,6 @@ export default function MenuListComposition() {
 					placement='bottom-start'
 					transition
 					disablePortal
-					variant='filled'
 				>
 					{({ TransitionProps, placement }) => (
 						<Grow
@@ -93,18 +95,22 @@ export default function MenuListComposition() {
 									>
 										<MenuItem
 											onClick={(e) => {
-												window.location.href = "/about";
+												// window.location.href = "/about";
 												handleClose();
 											}}
-										>About</MenuItem>
-										<MenuItem onClick={(e) => {
-												window.location.href = "/crasher";
-												handleClose();
-											}}>Crash Browser With Buttons</MenuItem>
-										<MenuItem onClick={(e) => {
-												window.location.href = "/tip-calculator";
-												handleClose();
-											}}>Tip Calculator</MenuItem>
+										>This Menu Exists For Fun</MenuItem>
+										{menuItems.map((item) => (
+											<MenuItem
+												key={item.title}
+												onClick={(e) => {
+													window.location.href = item.url;
+													handleClose();
+												}}
+											>
+												{item.title}
+											</MenuItem>
+										))}
+									
 									</MenuList>
 								</ClickAwayListener>
 							</Paper>
