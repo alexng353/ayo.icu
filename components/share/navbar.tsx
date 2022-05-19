@@ -12,12 +12,12 @@ function Navbar() {
   return (
     <div className="flex flex-row justify-center mt-2">
       <div className="float-left w-auto">
-        <NavLink href="/">/</NavLink>
+        <NavLink href="/">/alex</NavLink>
         &nbsp;&nbsp;
         <NavLink href="/about">/about</NavLink>
         &nbsp;&nbsp;
         <NavLink href="/projects">/projects</NavLink>
-        <div className="md:ml-96 sm:ml-60 ml-16 float-right">
+        <div className="md:ml-80 sm:ml-60 ml-16 float-right">
           <Menu />
         </div>
       </div>

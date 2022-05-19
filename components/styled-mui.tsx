@@ -25,7 +25,7 @@ const NavButton = styled(ButtonUnstyled)`
   font-size: 0.95rem;
   background-color: transparent;
   padding: 8px 16px;
-  border-radius: 24px;
+  border-radius: 8px;
   color: white;
   transition: all 150ms ease;
   cursor: pointer;
