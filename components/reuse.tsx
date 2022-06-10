@@ -21,16 +21,25 @@ function NavLink(props){
         <Link href={props.href}>
             <a>
                 <NavButton className=''>
-                    <span className='underline'>{props.children}</span>
+                    <span className=''>{props.children}</span>
                 </NavButton>
             </a>
         </Link>
     )
 }
 
+function Tech(props){
+    return(
+        <div className="inline-flex">
+            {props.children}
+        </div>
+    )
+}
+
 export {
     InlineHref,
-    NavLink
+    NavLink,
+    Tech
 };
 export type { 
     InLineHrefProps 

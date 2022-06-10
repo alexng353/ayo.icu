@@ -29,10 +29,12 @@ const NavButton = styled(ButtonUnstyled)`
   color: white;
   transition: all 150ms ease;
   cursor: pointer;
+  text-decoration: underline;
   
   &:hover {
   background-color: gray;
   color: white;
+  text-decoration:none;
 }
 
 `

@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Tooltip, Typography } from "@mui/material";
 import Link from "next/link";
 import { Component } from "react";
 import Menu from "./menuList";
@@ -17,9 +17,9 @@ function Navbar() {
         <NavLink href="/about">/about</NavLink>
         &nbsp;&nbsp;
         <NavLink href="/projects">/projects</NavLink>
-        <div className="md:ml-80 sm:ml-60 ml-16 float-right">
+        {/* <div className="md:ml-80 sm:ml-60 ml-16 float-right">
           <Menu />
-        </div>
+        </div> */}
       </div>
     </div>
   );
