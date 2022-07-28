@@ -31,7 +31,7 @@ import {
 import { MdContactPage } from "react-icons/md";
 
 import React from "react";
-import { Tooltip } from "@mui/material";
+import { Tooltip, Typography } from "@mui/material";
 import Link from "next/link";
 
 function Home() {
@@ -82,13 +82,23 @@ function Home() {
             </Link>
           </Tooltip>
         </div>
-
+        <br />
+        <p>Hey There, I&apos;m</p>
+        <Typography variant="h1" className="text-4xl tracking-wide">
+          Alex Ng
+        </Typography>
         <p className="pt-3">
-          Hi, I&apos;m a High School student learning to code. I&apos;m from
-          Vancouver, Canada and I&apos;m interested in Full Stack web
-          development, machine learning/vision and scripting. My current goals
-          as a developer are to learn containerization and kubernetes as well as
-          find some inspiration to write something useful for other people.
+          I&apos;m a 16 year old Full Stack web developer from Vancouver,
+          Canada. I&apos;m currently working as a{" "}
+          <span className="text-green-400 hover:underline">
+            <a href="https://www.edubeyond.org">
+              Software Engineer at EduBeyond
+            </a>
+          </span>
+          , an international education charity that provides education
+          opportunities to children in developing countries. I&apos;m learning
+          containerization and kubernetes and doing my best to write something
+          useful for other people.
         </p>
 
         <br />
