@@ -28,7 +28,7 @@ function Projects () {
             </p>
             <Tooltip title="I promise there will be projects on here... eventually">
               <a href="https://giphy.com/gifs/cat-WYEWpk4lRPDq0" target="_blank" rel="noopener noreferrer">
-                <Image src="https://media.giphy.com/media/WYEWpk4lRPDq0/giphy.gif" height="500" width="500" alt="cute cat gif"/> 
+                <img src="https://media.giphy.com/media/WYEWpk4lRPDq0/giphy.gif" height="500" width="500" alt="cute cat gif"/> 
               </a>
             </Tooltip>
           </div>
