@@ -55,11 +55,13 @@ function Projects() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="https://media.giphy.com/media/WYEWpk4lRPDq0/giphy.gif"
-                  height="500"
-                  width="500"
-                  alt="cute cat gif"
+                {/* reason for using img is  */}
+                <Image
+                  src="/giphy.webp"
+                  alt="cat"
+                  width={500}
+                  height={500}
+                  layout="responsive"
                 />
               </a>
             ) : (
