@@ -17,6 +17,8 @@ function Navbar() {
         <NavLink href="/about">/about</NavLink>
         &nbsp;&nbsp;
         <NavLink href="/projects">/projects</NavLink>
+        {/* &nbsp;&nbsp;
+        <NavLink href="/tools">/tools</NavLink> */}
         {/* <div className="md:ml-80 sm:ml-60 ml-16 float-right">
           <Menu />
         </div> */}
