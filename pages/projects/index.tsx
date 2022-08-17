@@ -4,7 +4,6 @@ import Footer from "../../components/share/footer";
 import Navbar from "../../components/share/navbar";
 import Content from "../../components/content";
 import { Button, Typography } from "@mui/material";
-import Image from "next/image";
 // grab loading wheel from material-ui
 import { CircularProgress, Tooltip } from "@mui/material/";
 import Link from "next/link";
@@ -29,7 +28,7 @@ function Projects() {
               consist of a list of tools I&apos;ve made.
             </p>
             <br />
-            <div className="md:grid md:grid-cols-2 md:gap-4 grid grid-cols-1 space-y-4">
+            <div className="md:grid md:grid-cols-2 md:gap-4 grid grid-cols-1 space-y-4 md:space-y-0">
               <Tooltip title="A barebones typescript generator written in rust">
                 <Button
                   className="bg-green-500 hover:bg-green-600"
@@ -39,7 +38,7 @@ function Projects() {
                   TypeScript Generator
                 </Button>
               </Tooltip>
-              {/* <Tooltip title="A utility to download and format the cloudflare ip range list">
+              <Tooltip title="A utility to download and format the cloudflare ip range list">
                 <Button
                   className="bg-green-500 hover:bg-green-600"
                   href="/projects/cf-ips"
@@ -47,7 +46,7 @@ function Projects() {
                 >
                   Cloudflare IPs
                 </Button>
-              </Tooltip> */}
+              </Tooltip>
             </div>
             {show ? (
               <a
@@ -56,12 +55,11 @@ function Projects() {
                 rel="noopener noreferrer"
               >
                 {/* reason for using img is  */}
-                <Image
+                <img
                   src="/giphy.webp"
                   alt="cat"
                   width={500}
                   height={500}
-                  layout="responsive"
                 />
               </a>
             ) : (
