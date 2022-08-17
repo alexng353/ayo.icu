@@ -7,6 +7,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   Typography,
+  Tooltip,
 } from "@mui/material";
 import { NavLink } from "../../components/reuse";
 import { RiArrowUpSFill } from "react-icons/ri";
@@ -15,7 +16,7 @@ export default function TypescriptGenerator() {
   return (
     <>
       <Head>
-        <title>Typescript Generator | alexng353</title>
+        <title>Cloudflare IP Range Grabber | alexng353</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -23,19 +24,22 @@ export default function TypescriptGenerator() {
       <Content>
         <div className="flex justify-center ">
           <Typography variant="h4" component="h4">
-            Typescript Generator
+            Cloudflare IP Range Grabber
           </Typography>
         </div>
         <Typography variant="body1" component="p">
-          A barebones typescript project generator written in rust. This project
-          was written to help me learn rust, so the code isn&apos;t super great.
+          A very simple tool to grab the Cloudflare IP range from the Cloudflare
+          website and parse it into a nginx compatible format.
           <br />
           <br />
-          <NavLink href="https://github.com/alexng353/typescript-generator">
+          <NavLink href="https://github.com/alexng353/cf-ips">
             Source Code
           </NavLink>
-          <NavLink href="https://github.com/alexng353/typescript-generator/releases/tag/v1.0.0-release">
+          <NavLink href="https://github.com/alexng353/cf-ips/releases/tag/v1.0.0">
             Download
+          </NavLink>
+          <NavLink href="https://github.com/alexng353/not-a-tutorial/blob/main/nginx/Get%20IPs%20from%20Cloudflare.md">
+            Get Real IP from Cloudflare
           </NavLink>
         </Typography>
         <Accordion>
@@ -46,30 +50,13 @@ export default function TypescriptGenerator() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body1" component="p">
-              - Generate a typescript file with a single command
-              <br />
-              - Lightweight at 1.7 MB
-              <br />
-              - Auto install dependencies
-              <br />
-              - Auto generate MIT license
-              <br />
-              - Auto generate README.md
-              <br />
-              - Auto generate package.json, tsconfig.json and nodemon.json
-              <br />
-              - Includes customizable logger
-              <br />- Run your project with npm run dev
+              - Generate the thing you need to put in your nginx config with 1
+              command
             </Typography>
           </AccordionDetails>
         </Accordion>
 
-        <img
-          src="/projects/typescript-generator/demo.png"
-          alt="demo"
-          width={1602}
-          height={1744}
-        />
+        <img src="/projects/cf-ips/demo.png" alt="demo" />
         {/* not to self: write some documentation and clean up the codebase */}
         {/* <Accordion>
           <AccordionSummary expandIcon={<RiArrowUpSFill />}>

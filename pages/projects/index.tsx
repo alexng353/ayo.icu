@@ -4,7 +4,6 @@ import Footer from "../../components/share/footer";
 import Navbar from "../../components/share/navbar";
 import Content from "../../components/content";
 import { Button, Typography } from "@mui/material";
-import Image from "next/image";
 // grab loading wheel from material-ui
 import { CircularProgress, Tooltip } from "@mui/material/";
 import Link from "next/link";
@@ -56,12 +55,11 @@ function Projects() {
                 rel="noopener noreferrer"
               >
                 {/* reason for using img is  */}
-                <Image
+                <img
                   src="/giphy.webp"
                   alt="cat"
                   width={500}
                   height={500}
-                  layout="responsive"
                 />
               </a>
             ) : (
