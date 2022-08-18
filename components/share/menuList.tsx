@@ -1,5 +1,5 @@
 import {
-	Button,
+	// Button, 
 	ClickAwayListener,
 	Grow,
 	MenuItem,
@@ -10,6 +10,15 @@ import {
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
+import { MenuButton } from "../styled-mui";
+
+import MenuIcon from "@mui/icons-material/Menu";
+
+import menuItems from "./menuItems.json";
+
+
+// don't forget to make this into the json version of menulist
+
 export default function MenuListComposition() {
 	const [open, setOpen] = useState(false);
 	const anchorRef = useRef<HTMLButtonElement>(null);
@@ -19,9 +28,9 @@ export default function MenuListComposition() {
 	};
 
 	const handleClose = () => {
-		if (anchorRef.current) {
-			return;
-		}
+		// if (anchorRef.current) {
+		// 	return;
+		// }
 
 		setOpen(false);
 	};
@@ -50,17 +59,16 @@ export default function MenuListComposition() {
 	return (
 		<Stack direction='row' spacing={2}>
 			<div>
-				<Button
+				<MenuButton
 					ref={anchorRef}
 					id='composition-button'
 					aria-controls={open ? "composition-menu" : undefined}
 					aria-expanded={open ? "true" : undefined}
 					aria-haspopup='true'
 					onClick={handleToggle}
-					variant='outlined'
 				>
-					menu
-				</Button>
+					<MenuIcon />
+				</MenuButton>
 				<Popper
 					open={open}
 					anchorEl={anchorRef.current}
@@ -87,18 +95,22 @@ export default function MenuListComposition() {
 									>
 										<MenuItem
 											onClick={(e) => {
-												window.location.href = "/about";
+												// window.location.href = "/about";
 												handleClose();
 											}}
-										>About</MenuItem>
-										<MenuItem onClick={(e) => {
-												window.location.href = "/crasher";
-												handleClose();
-											}}>Crash Browser With Buttons</MenuItem>
-										<MenuItem onClick={(e) => {
-												window.location.href = "/tip-calculator";
-												handleClose();
-											}}>Tip Calculator</MenuItem>
+										>This Menu Exists For Fun</MenuItem>
+										{menuItems.map((item) => (
+											<MenuItem
+												key={item.title}
+												onClick={(e) => {
+													window.location.href = item.url;
+													handleClose();
+												}}
+											>
+												{item.title}
+											</MenuItem>
+										))}
+									
 									</MenuList>
 								</ClickAwayListener>
 							</Paper>

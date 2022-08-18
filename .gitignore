@@ -1,6 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-/public/anime/
+/public/old_anime/
 
 # dependencies
 /node_modules

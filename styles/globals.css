@@ -1,8 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Inter&family=Roboto+Mono:wght@200&display=swap');
 
 html {
-    background-color: #0a0a0a;
-    color: #9ca3af;
+  background-color: #000;
+  color: #FFF;
+  font-family: 'Inter', sans-serif;
+}
+
+li {
+  font-family: 'Roboto Mono', monospace;
 }
