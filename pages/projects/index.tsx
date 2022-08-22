@@ -7,6 +7,7 @@ import { Button, Typography } from "@mui/material";
 // grab loading wheel from material-ui
 import { CircularProgress, Tooltip } from "@mui/material/";
 import Link from "next/link";
+import { GreenButton } from "../../components/styled-mui";
 
 function Projects() {
   const [show, setShow] = React.useState(false);
@@ -30,22 +31,22 @@ function Projects() {
             <br />
             <div className="md:grid md:grid-cols-2 md:gap-4 grid grid-cols-1 space-y-4 md:space-y-0">
               <Tooltip title="A barebones typescript generator written in rust">
-                <Button
-                  className="bg-green-500 hover:bg-green-600"
+                <GreenButton
+                  // className="bg-green-500 hover:bg-green-600"
                   href="/projects/typescript-generator"
                   variant="contained"
                 >
                   TypeScript Generator
-                </Button>
+                </GreenButton>
               </Tooltip>
               <Tooltip title="A utility to download and format the cloudflare ip range list">
-                <Button
-                  className="bg-green-500 hover:bg-green-600"
+                <GreenButton
+                  // className="bg-green-500 hover:bg-green-600"
                   href="/projects/cf-ips"
                   variant="contained"
                 >
                   Cloudflare IPs
-                </Button>
+                </GreenButton>
               </Tooltip>
             </div>
             {show ? (
@@ -55,12 +56,7 @@ function Projects() {
                 rel="noopener noreferrer"
               >
                 {/* reason for using img is  */}
-                <img
-                  src="/giphy.webp"
-                  alt="cat"
-                  width={500}
-                  height={500}
-                />
+                <img src="/giphy.webp" alt="cat" width={500} height={500} />
               </a>
             ) : (
               <button

@@ -24,8 +24,9 @@ import {
   SiCsharp,
   SiDocker,
   SiRust,
-  // linked in
+  SiMongodb,
   SiLinkedin,
+  SiGit,
 } from "react-icons/si";
 
 import { MdContactPage } from "react-icons/md";
@@ -83,23 +84,37 @@ function Home() {
           </Tooltip>
         </div>
         <br />
-        <p>Hey There, I&apos;m</p>
+        <p>Hey there, I&apos;m</p>
         <Typography variant="h1" className="text-4xl tracking-wide">
-          Alex Ng
+          Alexander Ng,
         </Typography>
-        <p className="pt-3">
-          I&apos;m a 16 year old Full Stack web developer from Vancouver,
-          Canada. I&apos;m currently working as a{" "}
+        <div className="flex flex-col gap-4">
+          <p className="pt-3">
+            A 16 year old Full Stack web developer from Vancouver, Canada.
+            I&apos;m currently working as a{" "}
+            <span className="text-green-400 hover:underline">
+              <a href="https://www.edubeyond.org">
+                Software Engineer at EduBeyond
+              </a>
+            </span>
+            , an international education charity that provides education
+            opportunities to children in developing countries.
+          </p>
+          <p>
+            In my spare time, I like to build things, play games, and learn new
+            things, which currently include Rust, Docker and MongoDB.
+          </p>
+        </div>
+        <div className="mt-4">
+          You can check out my{" "}
           <span className="text-green-400 hover:underline">
-            <a href="https://www.edubeyond.org">
-              Software Engineer at EduBeyond
-            </a>
+            <Link href="/projects">projects</Link>
+          </span>{" "}
+          and{" "}
+          <span className="text-green-400 hover:underline">
+            <Link href="https://github.com/alexng353">Github</Link>
           </span>
-          , an international education charity that provides education
-          opportunities to children in developing countries. I&apos;m learning
-          containerization and kubernetes and doing my best to write something
-          useful for other people.
-        </p>
+        </div>
 
         <br />
 
@@ -112,17 +127,16 @@ function Home() {
           <ListItem icon={SiPython} text="Python" />
           <ListItem icon={SiTypescript} text="TypeScript" />
           <ListItem icon={SiMysql} text="Mysql" />
-          <ListItem icon={SiCsharp} text="C#" />
           <ListItem icon={SiNextDotJs} text="Next.js" />
           <ListItem icon={SiTailwindcss} text="TailwindCSS" />
           <ListItem icon={SiRedis} text="Redis" />
+          <ListItem icon={SiGit} text="Git" />
         </ul>
-        <br />
-        <h1 className="text-3xl">Learning</h1>
         <br />
         <ul className="grid grid-cols-3 gap-4 sm:grid-cols-4">
           <ListItem icon={SiDocker} text="Docker" />
           <ListItem icon={SiRust} text="Rust" />
+          <ListItem icon={SiMongodb} text="MongoDB" />
         </ul>
       </Content>
       <Footer />
