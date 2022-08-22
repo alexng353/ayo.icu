@@ -15,7 +15,7 @@ const GreenButton = styled(ButtonUnstyled)`
 
   &:hover {
   background-color: rgb(34 197 94);
-  border: 1px solid yellow;
+  // border: 1px solid yellow;
   color: white;
 }
 `
@@ -56,6 +56,8 @@ const GrayButton = styled(ButtonUnstyled)`
   color: white;
 }
 `
+
+// const GreenButton
 
 const GreenTextField = styled(TextField)({
   "& .MuiInputBase-root": {
