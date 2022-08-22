@@ -14,7 +14,7 @@ const GreenButton = styled(ButtonUnstyled)`
   cursor: pointer;
 
   &:hover {
-  background-color: rgb(34 197 94);
+  background-color: rgb(22 163 74);
   // border: 1px solid yellow;
   color: white;
 }

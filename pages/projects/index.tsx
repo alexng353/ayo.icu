@@ -31,22 +31,22 @@ function Projects() {
             <br />
             <div className="md:grid md:grid-cols-2 md:gap-4 grid grid-cols-1 space-y-4 md:space-y-0">
               <Tooltip title="A barebones typescript generator written in rust">
-                <GreenButton
-                  // className="bg-green-500 hover:bg-green-600"
-                  href="/projects/typescript-generator"
-                  variant="contained"
-                >
-                  TypeScript Generator
-                </GreenButton>
+                <Link href="/projects/typescript-generator">
+                  <a>
+                    <GreenButton variant="contained">
+                      TypeScript Generator
+                    </GreenButton>
+                  </a>
+                </Link>
               </Tooltip>
               <Tooltip title="A utility to download and format the cloudflare ip range list">
-                <GreenButton
-                  // className="bg-green-500 hover:bg-green-600"
-                  href="/projects/cf-ips"
-                  variant="contained"
-                >
-                  Cloudflare IPs
-                </GreenButton>
+                <Link href="/projects/cf-ips">
+                  <a>
+                    <GreenButton variant="contained">
+                      Cloudflare IPs
+                    </GreenButton>
+                  </a>
+                </Link>
               </Tooltip>
             </div>
             {show ? (
