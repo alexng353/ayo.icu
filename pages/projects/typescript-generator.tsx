@@ -16,7 +16,6 @@ export default function TypescriptGenerator() {
     <>
       <Head>
         <title>Typescript Generator | alexng353</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Navbar />

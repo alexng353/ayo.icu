@@ -17,7 +17,6 @@ export default function TypescriptGenerator() {
     <>
       <Head>
         <title>Cloudflare IP Range Grabber | alexng353</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Navbar />

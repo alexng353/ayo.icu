@@ -27,6 +27,9 @@ import {
   SiMongodb,
   SiLinkedin,
   SiGit,
+  SiPostgresql,
+  SiPrisma,
+  SiGithubactions,
 } from "react-icons/si";
 
 import { MdContactPage } from "react-icons/md";
@@ -40,7 +43,6 @@ function Home() {
     <>
       <Head>
         <title>Home | alexng353</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
       <Content>
@@ -51,7 +53,10 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SiGithub style={{ color: "white" }} className="h-6 w-6" />
+              <SiGithub
+                style={{ color: "white" }}
+                className="h-6 w-6 hover:scale-110 transition-all ease-in-out"
+              />
             </a>
           </Tooltip>
           <Tooltip title="Twitter">
@@ -60,7 +65,10 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SiTwitter style={{ color: "white" }} className="h-6 w-6" />
+              <SiTwitter
+                style={{ color: "white" }}
+                className="h-6 w-6 hover:scale-110 transition-all ease-in-out"
+              />
             </a>
           </Tooltip>
           <Tooltip title="LinkedIn">
@@ -69,7 +77,10 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SiLinkedin style={{ color: "white" }} className="h-6 w-6" />
+              <SiLinkedin
+                style={{ color: "white" }}
+                className="h-6 w-6 hover:scale-110 transition-all ease-in-out"
+              />
             </a>
           </Tooltip>
           <Tooltip title="Contact">
@@ -77,7 +88,7 @@ function Home() {
               <a>
                 <MdContactPage
                   style={{ color: "white", position: "relative", top: "-2" }}
-                  className="h-7 w-7"
+                  className="h-7 w-7 hover:scale-110 transition-all ease-in-out"
                 />
               </a>
             </Link>
@@ -86,11 +97,11 @@ function Home() {
         <br />
         <p>Hey there, I&apos;m</p>
         <Typography variant="h1" className="text-4xl tracking-wide">
-          Alexander Ng,
+          Alexander Ng
         </Typography>
         <div className="flex flex-col gap-4">
           <p className="pt-3">
-            A 16 year old Full Stack web developer from Vancouver, Canada.
+            A 16 year old Full Stack web developer based in Vancouver, Canada.
             I&apos;m currently working as a{" "}
             <span className="text-green-400 hover:underline">
               <a href="https://www.edubeyond.org">
@@ -98,7 +109,9 @@ function Home() {
               </a>
             </span>
             , an international education charity that provides education
-            opportunities to children in developing countries.
+            opportunities to children in developing countries. Primarily, I
+            write a lot of TypeScript React and Next.js, but I also have good
+            experience with Rust (my current favourite), Python, and C#.
           </p>
           <p>
             In my spare time, I like to build things, play games, and learn new
@@ -114,29 +127,34 @@ function Home() {
           <span className="text-green-400 hover:underline">
             <Link href="https://github.com/alexng353">Github</Link>
           </span>
+          .
         </div>
 
         <br />
 
         <h1 className="text-3xl">Technologies</h1>
         <br />
-
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <ListItem icon={SiReact} text="React.js" />
-          <ListItem icon={SiNodeDotJs} text="Node.js" />
-          <ListItem icon={SiPython} text="Python" />
-          <ListItem icon={SiTypescript} text="TypeScript" />
-          <ListItem icon={SiMysql} text="Mysql" />
+        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
           <ListItem icon={SiNextDotJs} text="Next.js" />
+          <ListItem icon={SiReact} text="React.js" />
           <ListItem icon={SiTailwindcss} text="TailwindCSS" />
-          <ListItem icon={SiRedis} text="Redis" />
+          <ListItem icon={SiNodeDotJs} text="Node.js" />
+          <ListItem icon={SiTypescript} text="TypeScript" />
+          <ListItem icon={SiPrisma} text="PrismaORM" />
+          <ListItem icon={SiPython} text="Python" />
           <ListItem icon={SiGit} text="Git" />
+          <ListItem icon={SiGithub} text="GitHub" />
+          <ListItem icon={SiGithubactions} text="GitHub Actions" />
+          <ListItem icon={SiRust} text="Rust" />
         </ul>
         <br />
-        <ul className="grid grid-cols-3 gap-4 sm:grid-cols-4">
+        <br />
+        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
           <ListItem icon={SiDocker} text="Docker" />
-          <ListItem icon={SiRust} text="Rust" />
           <ListItem icon={SiMongodb} text="MongoDB" />
+          <ListItem icon={SiPostgresql} text="PostgreSQL" />
+          <ListItem icon={SiRedis} text="Redis" />
+          <ListItem icon={SiMysql} text="MySQL" />
         </ul>
       </Content>
       <Footer />

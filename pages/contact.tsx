@@ -13,7 +13,6 @@ export default function Contact() {
     <>
       <Head>
         <title>Contact</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
       <Content>

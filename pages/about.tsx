@@ -13,7 +13,6 @@ export default function About() {
     <>
       <Head>
         <title>About</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
       <Content>

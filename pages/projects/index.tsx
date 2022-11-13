@@ -11,11 +11,12 @@ import { GreenButton } from "../../components/styled-mui";
 
 function Projects() {
   const [show, setShow] = React.useState(false);
+  const linkStyles =
+    "w-full border text-center px-4 py-2 border-green-500 hover:bg-green-500 rounded-lg transition-all";
   return (
     <>
       <Head>
         <title>Projects | alexng353</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
       <Content>
@@ -29,43 +30,47 @@ function Projects() {
               consist of a list of tools I&apos;ve made.
             </p>
             <br />
-            <div className="md:grid md:grid-cols-2 md:gap-4 grid grid-cols-1 space-y-4 md:space-y-0">
-              <Tooltip title="A barebones typescript generator written in rust">
-                <Link href="/projects/typescript-generator">
-                  <a>
-                    <GreenButton variant="contained">
-                      TypeScript Generator
-                    </GreenButton>
-                  </a>
-                </Link>
-              </Tooltip>
-              <Tooltip title="A utility to download and format the cloudflare ip range list">
-                <Link href="/projects/cf-ips">
-                  <a>
-                    <GreenButton variant="contained">
-                      Cloudflare IPs
-                    </GreenButton>
-                  </a>
-                </Link>
-              </Tooltip>
-            </div>
-            {show ? (
-              <a
-                href="https://giphy.com/gifs/cat-WYEWpk4lRPDq0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {/* reason for using img is  */}
-                <img src="/giphy.webp" alt="cat" width={500} height={500} />
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
+              <a className={linkStyles} href="https://edubeyond.ca">
+                <span>EduBeyond</span>
               </a>
-            ) : (
-              <button
-                onClick={() => setShow(true)}
-                className="hover:underline text-green-500 hover:bg-gray-500 rounded-lg p-4"
-              >
-                Show me the cat gif
-              </button>
-            )}
+              <Link href="/projects/mkkl-dl">
+                <a className={linkStyles}>Mangakakalot Downloader</a>
+              </Link>
+              <Link href="/projects/typescript-generator">
+                <a className={linkStyles}>TypeScript Generator</a>
+              </Link>
+              <Link href="/projects/cf-ips">
+                <a className={linkStyles}>Cloudflare IPs</a>
+              </Link>
+            </div>
+            <div className="grid place-items-center mt-4">
+              {show ? (
+                <>
+                  <a
+                    href="https://giphy.com/gifs/cat-WYEWpk4lRPDq0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {/* reason for using img is  */}
+                    <img src="/giphy.webp" alt="cat" width={400} height={400} />
+                  </a>
+                  <button
+                    onClick={() => setShow(false)}
+                    className=" text-green-500 hover:bg-gray-500 rounded-lg px-4 py-2"
+                  >
+                    Hide the cat gif
+                  </button>
+                </>
+              ) : (
+                <button
+                  onClick={() => setShow(true)}
+                  className=" text-green-500 hover:bg-gray-500 rounded-lg px-4 py-2  transition-all"
+                >
+                  Show me the cat gif
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </Content>

@@ -1,6 +1,6 @@
-import { styled } from '@mui/material/styles';
-import { ButtonUnstyled } from '@mui/base';
-import { TextField } from '@mui/material';
+import { styled } from "@mui/material/styles";
+import { ButtonUnstyled } from "@mui/base";
+import { TextField } from "@mui/material";
 
 const GreenButton = styled(ButtonUnstyled)`
   font-family: IBM Plex Sans, sans-serif;
@@ -12,16 +12,17 @@ const GreenButton = styled(ButtonUnstyled)`
   color: white;
   transition: all 150ms ease;
   cursor: pointer;
+  width: full;
 
   &:hover {
-  background-color: rgb(22 163 74);
-  // border: 1px solid yellow;
-  color: white;
-}
-`
+    background-color: rgb(22 163 74);
+    // border: 1px solid yellow;
+    color: white;
+  }
+`;
 // clear button, on hover background becomes gray and border becomes slightly lighter gray
 const NavButton = styled(ButtonUnstyled)`
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 0.95rem;
   background-color: transparent;
   padding: 8px 16px;
@@ -30,14 +31,13 @@ const NavButton = styled(ButtonUnstyled)`
   transition: all 150ms ease;
   cursor: pointer;
   text-decoration: underline;
-  
-  &:hover {
-  background-color: gray;
-  color: white;
-  text-decoration:none;
-}
 
-`
+  &:hover {
+    background-color: rgb(22 163 74);
+    color: white;
+    text-decoration: none;
+  }
+`;
 //menulist button
 const GrayButton = styled(ButtonUnstyled)`
   font-family: IBM Plex Sans, sans-serif;
@@ -51,44 +51,43 @@ const GrayButton = styled(ButtonUnstyled)`
   cursor: pointer;
 
   &:hover {
-  background-color: black;
-  border: 1px solid yellow;
-  color: white;
-}
-`
+    background-color: black;
+    border: 1px solid yellow;
+    color: white;
+  }
+`;
 
 // const GreenButton
 
 const GreenTextField = styled(TextField)({
   "& .MuiInputBase-root": {
-    color: "rgb(255 255 255)"
+    color: "rgb(255 255 255)",
   },
   "& label.Mui-focused": {
-    color: "rgb(34 197 94)"
+    color: "rgb(34 197 94)",
   },
   "& label": {
-    color: "rgb(34 197 94)"
+    color: "rgb(34 197 94)",
   },
 
   "& .MuiInput-underline:after": {
-    borderBottomColor: "rgb(34 197 94)"
+    borderBottomColor: "rgb(34 197 94)",
   },
 
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
-      borderColor: "rgb(34 197 94)"
+      borderColor: "rgb(34 197 94)",
     },
     "&:hover fieldset": {
-      borderColor: "yellow"
+      borderColor: "yellow",
     },
     "&.Mui-focused fieldset": {
-      borderColor: "rgb(34 197 94)"
-    }
-  }
+      borderColor: "rgb(34 197 94)",
+    },
+  },
 });
-  
-const MenuButton = styled(ButtonUnstyled)`
 
+const MenuButton = styled(ButtonUnstyled)`
   font-family: IBM Plex Sans, sans-serif;
   font-size: 0.95rem;
   background-color: rgb(34 197 94);
@@ -98,13 +97,12 @@ const MenuButton = styled(ButtonUnstyled)`
   color: white;
   transition: all 150ms ease;
   cursor: pointer;
-  
-  &:hover {
-  background-color: green;
-  border: 1px solid white;
-}
-`
 
+  &:hover {
+    background-color: green;
+    border: 1px solid white;
+  }
+`;
 
 // const NavButton = styled(ButtonUnstyled)`
 //   font-family: IBM Plex Sans, sans-serif;
@@ -115,7 +113,7 @@ const MenuButton = styled(ButtonUnstyled)`
 //   color: white;
 //   transition: all 150ms ease;
 //   cursor: pointer;
-  
+
 //   &:hover {
 //   background-color: gray;
 //   color: white;
@@ -123,10 +121,4 @@ const MenuButton = styled(ButtonUnstyled)`
 
 // `
 
-export {
-    GreenButton,
-    GreenTextField,
-    GrayButton,
-    NavButton,
-    MenuButton
-}
+export { GreenButton, GreenTextField, GrayButton, NavButton, MenuButton };
