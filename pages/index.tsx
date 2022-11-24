@@ -96,26 +96,40 @@ function Home() {
         </div>
         <br />
         <p>Hey there, I&apos;m</p>
-        <Typography variant="h1" className="text-4xl tracking-wide">
+        <Typography variant="h1" className="text-3xl tracking-wide">
           Alexander Ng
         </Typography>
         <div className="flex flex-col gap-4">
           <p className="pt-3">
-            A 16 year old Full Stack web developer based in Vancouver, Canada.
+            A 16 year old Full Stack web developer based in{" "}
+            <span className="text-fuchsia-500">Vancouver, Canada.</span>
             I&apos;m currently working as a{" "}
-            <span className="text-green-400 hover:underline">
-              <a href="https://www.edubeyond.org">
-                Software Engineer at EduBeyond
-              </a>
-            </span>
+            <a
+              href="https://www.edubeyond.org"
+              className="text-green-400 hover:underline"
+            >
+              Software Engineer at EduBeyond
+            </a>
             , an international education charity that provides education
             opportunities to children in developing countries. Primarily, I
-            write a lot of TypeScript React and Next.js, but I also have good
-            experience with Rust (my current favourite), Python, and C#.
+            write a lot of <span className="text-purple-500">TypeScript</span>,{" "}
+            <span className="text-purple-500">React</span> and{" "}
+            <span className="text-purple-500">Next.js</span>, but I also have
+            good experience with <span className="text-purple-500">Rust</span>,
+            (my current favourite),{" "}
+            <span className="text-purple-500">Python</span>, and{" "}
+            <span className="text-purple-500">GoLang</span>.
           </p>
           <p>
-            In my spare time, I like to build things, play games, and learn new
-            things, which currently include Rust, Docker and MongoDB.
+            In my spare time, I like to build stuff, play games, and learn new
+            things, which currently include{" "}
+            <span className="text-purple-500">Rust</span>, and{" "}
+            <span className="text-purple-500">MongoDB</span>, though my
+            favourite database right now is{" "}
+            <span className="text-purple-500">PostgreSQL</span>. I&apos;m also
+            learning <span className="text-purple-500">Docker</span> and{" "}
+            <span className="text-purple-500">Prisma</span>, primarily to run
+            databases inside containers.
           </p>
         </div>
         <div className="mt-4">
@@ -127,7 +141,7 @@ function Home() {
           <span className="text-green-400 hover:underline">
             <Link href="https://github.com/alexng353">Github</Link>
           </span>
-          .
+          , where you can see what I&apos;m currently working on.
         </div>
 
         <br />
