@@ -96,9 +96,7 @@ function Home() {
         </div>
         <br />
         <p>Hey there, I&apos;m</p>
-        <Typography variant="h1" className="text-4xl tracking-wide">
-          Alexander Ng
-        </Typography>
+        <h1 className="text-4xl tracking-wide">Alexander Ng</h1>
         <div className="flex flex-col gap-4">
           <p className="pt-3">
             A 16 year old Full Stack web developer based in{" "}
