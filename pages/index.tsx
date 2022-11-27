@@ -94,7 +94,8 @@ function Home() {
             </Link>
           </Tooltip>
         </div>
-        <br />
+        <br className="select-none" />
+
         <p>Hey there, I&apos;m</p>
         <h1 className="text-4xl tracking-wide">Alexander Ng</h1>
         <div className="flex flex-col gap-4">
@@ -112,7 +113,7 @@ function Home() {
             opportunities to children in developing countries. Primarily, I
             write a lot of <span className="text-p-500">TypeScript</span>,{" "}
             <span className="text-p-500">React</span> and{" "}
-            <span className="text-p-500">Next.js</span>, but I also have good
+            <span className="text-p-500">Next</span>, but I also have good
             experience with <span className="text-p-500">Rust</span>, (my
             current favourite), <span className="text-p-500">Python</span>, and{" "}
             <span className="text-p-500">GoLang</span>.
@@ -140,31 +141,50 @@ function Home() {
           , where you can see what I&apos;m currently working on.
         </div>
 
-        <br />
+        <br className="select-none" />
 
         <h1 className="text-3xl">Technologies</h1>
-        <br />
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
-          <ListItem icon={SiNextDotJs} text="Next.js" />
-          <ListItem icon={SiReact} text="React.js" />
-          <ListItem icon={SiTailwindcss} text="TailwindCSS" />
-          <ListItem icon={SiNodeDotJs} text="Node.js" />
+        <br className="select-none" />
+        <ul className="grid grid-cols-2 gap-y-6 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
+          <ListItem icon={SiNextDotJs} text="Next" />
+          <ListItem icon={SiReact} text="React" />
+          <ListItem icon={SiTailwindcss} text="Tailwind" />
+          <ListItem icon={SiNodeDotJs} text="Node" />
           <ListItem icon={SiTypescript} text="TypeScript" />
-          <ListItem icon={SiPrisma} text="PrismaORM" />
+          <ListItem icon={SiPrisma} text="Prisma" />
           <ListItem icon={SiPython} text="Python" />
           <ListItem icon={SiGit} text="Git" />
           <ListItem icon={SiGithub} text="GitHub" />
-          <ListItem icon={SiGithubactions} text="GitHub Actions" />
+          <ListItem icon={SiGithubactions} text="CI/CD" />
           <ListItem icon={SiRust} text="Rust" />
         </ul>
-        <br />
-        <br />
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
+        <br className="select-none" />
+        <br className="select-none" />
+        <ul className="grid grid-cols-2 gap-y-6 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
           <ListItem icon={SiDocker} text="Docker" />
           <ListItem icon={SiMongodb} text="MongoDB" />
           <ListItem icon={SiPostgresql} text="PostgreSQL" />
           <ListItem icon={SiRedis} text="Redis" />
-          <ListItem icon={SiMysql} text="MySQL" />
+          <li className="flex space-x-2 items-center">
+            <span>
+              <img
+                src="/MySQL.png"
+                alt="MySQL"
+                className="h-8 w-8 select-none"
+              />
+            </span>
+            <span>MySQL</span>
+          </li>
+          <li className="flex space-x-2 items-center">
+            <span>
+              <img
+                src="/tauri.png"
+                alt="tauri"
+                className="h-8 w-8 select-none"
+              />
+            </span>
+            <span>Tauri</span>
+          </li>
         </ul>
       </Content>
       <Footer />

@@ -5,15 +5,12 @@ import Menu from "./menuList";
 import styles from "../../styles/bar.module.css";
 import { NavLink } from "../reuse";
 
-import MenuIcon from "@mui/icons-material/Menu";
-
-
 function Navbar() {
   return (
     <div className="flex flex-row justify-center mt-2">
       <div className="float-left w-auto">
         <NavLink href="/">/home</NavLink>
-        &nbsp;&nbsp;
+        <span className="select-none">&nbsp;&nbsp;</span>
         {/* <NavLink href="/about">/about</NavLink>
         &nbsp;&nbsp; */}
         <NavLink href="/projects">/projects</NavLink>
