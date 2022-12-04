@@ -109,7 +109,7 @@ function Home() {
             >
               Software Engineer at EduBeyond
             </a>
-            , an international education charity that provides education
+            , an international edtech startup that provides education
             opportunities to children in developing countries. Primarily, I
             write a lot of <span className="text-p-500">TypeScript</span>,{" "}
             <span className="text-p-500">React</span> and{" "}
