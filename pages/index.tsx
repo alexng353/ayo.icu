@@ -30,6 +30,7 @@ import {
   SiPostgresql,
   SiPrisma,
   SiGithubactions,
+  SiExpress,
 } from "react-icons/si";
 
 import { MdContactPage } from "react-icons/md";
@@ -149,6 +150,7 @@ function Home() {
           <ListItem icon={SiNextDotJs} text="Next" />
           <ListItem icon={SiReact} text="React" />
           <ListItem icon={SiTailwindcss} text="Tailwind" />
+          <ListItem icon={SiExpress} text="ExpressJS" />
           <ListItem icon={SiNodeDotJs} text="Node" />
           <ListItem icon={SiTypescript} text="TypeScript" />
           <ListItem icon={SiPrisma} text="Prisma" />
