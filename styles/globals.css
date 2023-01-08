@@ -7,11 +7,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 html {
   background-color: #000;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* h1 {

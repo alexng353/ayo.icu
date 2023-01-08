@@ -3,7 +3,6 @@ import Footer from "../components/share/footer";
 import Navbar from "../components/share/navbar";
 import Content from "../components/content";
 import { ListItem } from "../components/list-item";
-import Script from "next/script";
 
 import {
   SiMysql,
@@ -35,11 +34,20 @@ import {
 
 import { MdContactPage } from "react-icons/md";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { Tooltip, Typography } from "@mui/material";
 import Link from "next/link";
 
 function Home() {
+  const show = useMemo(() => {
+    const date = new Date();
+    return (
+      (date.getMonth() === 10 && date.getDate() > 25) ||
+      date.getMonth() === 11 ||
+      (date.getMonth() === 0 && date.getDate() < 10)
+    );
+  }, []);
+
   return (
     <>
       <Head>
@@ -188,6 +196,14 @@ function Home() {
             <span>Tauri</span>
           </li>
         </ul>
+        {show && (
+          <a
+            href="https://embed.im/snow/"
+            className="absolute bottom-20 right-20 text-white hover:underline bg-green-500 rounded-lg px-4 py-2"
+          >
+            snow effect from embed.im/snow
+          </a>
+        )}
       </Content>
       <Footer />
     </>
