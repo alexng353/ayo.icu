@@ -1,8 +1,3 @@
-import { AppBar, Toolbar, Tooltip, Typography } from "@mui/material";
-import Link from "next/link";
-import { Component } from "react";
-import Menu from "./menuList";
-import styles from "../../styles/bar.module.css";
 import { NavLink } from "../reuse";
 
 function Navbar() {
