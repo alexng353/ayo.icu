@@ -19,7 +19,7 @@ export default function TypescriptGenerator() {
         <Headers
           title="alexng353 | Mangakakalot Downloader"
           description="A command-line tool to download manga from Mangakakalot."
-          image="https://raw.githubusercontent.com/alexng353/rust-mangakakalot/main/demo.png"
+          image="/projects/mkkl-dl/demo.png"
           url="https://ayo.icu/projects/mkkl-dl"
         />
       </Head>
@@ -50,10 +50,10 @@ export default function TypescriptGenerator() {
           library to make HTTP requests. It also uses regular expressions to
           parse the HTML, and grab the images from the site.
           <div className="my-2">
-            <NavLink href="https://github.com/alexng353/rust-mangakakalot">
+            <NavLink href="https://github.com/alexng353/mkkl-dl">
               Source Code
             </NavLink>
-            <NavLink href="https://github.com/alexng353/rust-mangakakalot/releases/latest">
+            <NavLink href="https://github.com/alexng353/mkkl-dl/releases/latest">
               Download
             </NavLink>
           </div>
@@ -68,7 +68,7 @@ export default function TypescriptGenerator() {
             <Typography variant="body1" component="p">
               - Download from mangakakalot with a single command
               <br />
-              - Lightweight at 10ish MB
+              - Lightweight at 6 MB (windows)
               <br />
               - It&apos;s an executable, so no need to install rust
               <br />
@@ -102,5 +102,3 @@ export default function TypescriptGenerator() {
     </>
   );
 }
-
-//DATABASE_URL="postgresql://umami:46vg79wGdBnD8Sw7YcDpGnTP@localhost:5445/umami?schema=public"

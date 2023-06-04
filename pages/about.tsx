@@ -14,20 +14,15 @@ export default function About() {
       </Head>
       <Navbar />
       <Content>
-        <div className="flex justify-center ">
-          <div className="text-center max-w-xl">
-            <Typography variant="h4" component="h4">
-              Made with <Favorite className="text-pink-500" /> by Alex
-            </Typography>
-            using Next.js, Material-UI and TailwindCSS.
-            {/* generate 4 empty lines */}
-            <br />
-            <br />
-            <br />
-            <br />
-            This site is for me to learn front end development and React, and to
-            showcase some of my favourite projects.
-          </div>
+        <div className="text-center">
+          <Typography variant="h4" component="h4">
+            Made with <Favorite className="text-pink-500" /> by Alex
+          </Typography>
+          using Next.js, Material-UI and TailwindCSS.
+          <p className="mt-20">
+            This site is for me to learn React and showcase some of my favourite
+            projects.
+          </p>
         </div>
       </Content>
       <Footer />

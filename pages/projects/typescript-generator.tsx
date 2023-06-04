@@ -53,7 +53,7 @@ export default function TypescriptGenerator() {
             <Typography variant="body1" component="p">
               - Generate a typescript project with a single command
               <br />
-              - Lightweight at 1.7 MB
+              - Lightweight at 1.3 MB (windows)
               <br />
               - Auto install dependencies
               <br />

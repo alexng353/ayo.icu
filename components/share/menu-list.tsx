@@ -48,8 +48,8 @@ export default function MenuListComposition() {
   // return focus to the button when we transitioned from !open -> open
   const [previousOpen, setPreviousOpen] = useState(open);
   useEffect(() => {
-    if (previousOpen === true && open === false) {
-      anchorReference.current.focus();
+    if (previousOpen && !open) {
+      anchorReference.current?.focus();
     }
 
     setPreviousOpen(open);

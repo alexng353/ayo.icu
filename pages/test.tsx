@@ -30,6 +30,7 @@ export default function Test({
   const [diff, setDiff] = useState<number>();
   useEffect(() => {
     if (!discord) return;
+    if (!diff) return;
     const end = new Date(discord.data.activities[0].timestamps.end);
     const now = new Date();
     setDiff(end.getTime() - now.getTime());
@@ -44,6 +45,16 @@ export default function Test({
     return () => clearTimeout(timeout);
   }, [diff, discord]);
 
+  const onMouseOver = () => {
+    if (!pfpReference.current) return;
+    pfpReference.current.src = `https://cdn.discordapp.com/avatars/${user}/${discord.data.discord_user.avatar}.gif?size=80`;
+  };
+
+  const onMouseLeave = () => {
+    if (!pfpReference.current) return;
+    pfpReference.current.src = `https://cdn.discordapp.com/avatars/${user}/${discord.data.discord_user.avatar}.webp?size=80`;
+  };
+
   return (
     <div className="w-full flex justify-center">
       {discord && discord.success && (
@@ -51,12 +62,8 @@ export default function Test({
           <div className="flex items-center gap-2">
             <img
               className="rounded-full"
-              onMouseOver={() => {
-                pfpReference.current.src = `https://cdn.discordapp.com/avatars/${user}/${discord.data.discord_user.avatar}.gif?size=80`;
-              }}
-              onMouseLeave={() => {
-                pfpReference.current.src = `https://cdn.discordapp.com/avatars/${user}/${discord.data.discord_user.avatar}.webp?size=80`;
-              }}
+              onMouseOver={onMouseOver}
+              onMouseLeave={onMouseLeave}
               ref={pfpReference}
               src={`https://cdn.discordapp.com/avatars/${user}/${discord.data.discord_user.avatar}.webp?size=80`}
               alt={`Avatar of ${discord.data.discord_user.username}#${discord.data.discord_user.discriminator}`}
@@ -64,16 +71,6 @@ export default function Test({
               height={48}
             />
             <div>
-              {/* <h1>
-                {!privacy ? (
-                  <>
-                    {discord.data.discord_user.username}#
-                    {discord.data.discord_user.discriminator}
-                  </>
-                ) : (
-                  <>{name ? name : "anonymous"}</>
-                )}
-              </h1> */}
               <h2>
                 <strong>
                   {discord.data.activities[0].name === "YouTube Music"
@@ -90,14 +87,6 @@ export default function Test({
               </h3>
             </div>
           </div>
-          {/* <div>
-            {
-              <img
-                src={`https://cdn.discordapp.com/app-assets/${discord.data.activities[0].application_id}/${discord.data.activities[0].assets.large_image}.png`}
-                alt=""
-              />
-            }
-          </div> */}
         </div>
       )}
     </div>

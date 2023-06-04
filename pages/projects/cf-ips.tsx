@@ -12,7 +12,7 @@ import Footer from "../../components/share/footer";
 import Navbar from "../../components/share/navbar";
 import { Headers } from "../../components/headers";
 
-export default function TypescriptGenerator() {
+export default function TypescriptGenerator({ ips }: { ips: string[] }) {
   return (
     <>
       <Head>
@@ -32,8 +32,12 @@ export default function TypescriptGenerator() {
           </Typography>
         </div>
         <Typography variant="body1" component="p">
-          A very simple tool to grab the Cloudflare IP range from the Cloudflare
-          website and parse it into a nginx compatible format.
+          Not gonna lie I don&apos;t really know why I ever made this. You can
+          still download it from github if you want, or you can just copy and
+          paste it from here.
+          <pre className="bg-gray-800 text-white p-2 rounded-md">
+            {ips.map((ip) => `set_real_ip_from ${ip};\n`)}
+          </pre>
           <br />
           <br />
           <NavLink href="https://github.com/alexng353/cf-ips">
@@ -79,4 +83,22 @@ export default function TypescriptGenerator() {
       <Footer />
     </>
   );
+}
+
+const getIps = async () => {
+  const response = await fetch("https://www.cloudflare.com/ips-v4");
+  const ips = await response.text();
+  const response2 = await fetch("https://www.cloudflare.com/ips-v6");
+  const ips2 = await response2.text();
+  return [...ips.split("\n"), ...ips2.split("\n")];
+};
+
+export async function getStaticProps() {
+  const ips = await getIps();
+  return {
+    props: {
+      ips,
+    },
+    revalidate: 60 * 60 * 24,
+  };
 }
