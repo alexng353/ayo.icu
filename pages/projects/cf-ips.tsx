@@ -1,16 +1,15 @@
-import Footer from "../../components/share/footer";
-import Navbar from "../../components/share/navbar";
-import Content from "../../components/content";
-import Head from "next/head";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Typography,
-  Tooltip,
 } from "@mui/material";
-import { NavLink } from "../../components/reuse";
+import Head from "next/head";
 import { RiArrowUpSFill } from "react-icons/ri";
+import Content from "../../components/content";
+import { NavLink } from "../../components/reuse";
+import Footer from "../../components/share/footer";
+import Navbar from "../../components/share/navbar";
 
 export default function TypescriptGenerator() {
   return (

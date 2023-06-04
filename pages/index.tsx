@@ -71,12 +71,10 @@ const HeadIcons = () => (
     </Tooltip>
     <Tooltip title="Contact">
       <Link href="/contact">
-        <a>
-          <MdContactPage
-            style={{ color: "white", position: "relative", top: "-2" }}
-            className="h-7 w-7 hover:scale-110 transition-all ease-in-out"
-          />
-        </a>
+        <MdContactPage
+          style={{ color: "white", position: "relative", top: "-2" }}
+          className="h-7 w-7 hover:scale-110 transition-all ease-in-out"
+        />
       </Link>
     </Tooltip>
   </div>

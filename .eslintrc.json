@@ -1,6 +1,55 @@
 {
-  "extends": "next/core-web-vitals",
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "reportUnusedDisableDirectives": true,
   "rules": {
-    "@next/next/no-img-element": "off"
-  }
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@next/next/no-img-element": "off",
+    "@typescript-eslint/ban-ts-comment": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {}
+      }
+    ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/array-type": "error",
+    "@typescript-eslint/consistent-generic-constructors": "error",
+    "unicorn/filename-case": [
+      "warn",
+      {
+        "cases": {
+          "kebabCase": true
+        }
+      }
+    ],
+    "unicorn/no-null": "off",
+    "unicorn/no-array-for-each": "warn",
+    "unicorn/number-literal-case": "off",
+    "unicorn/prefer-node-protocol": "off"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "ignorePatterns": ["*.d.ts", "types.ts", "*.js"]
 }

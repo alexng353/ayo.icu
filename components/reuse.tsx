@@ -2,33 +2,20 @@ import React from "react";
 import Link from "next/link";
 import { NavButton } from "./styled-mui";
 
-interface InLineHrefProps {
-  link: string;
+function InlineHref(properties: { href: string; children: React.ReactNode }) {
+  return <Link href={properties.href}>{properties.children}</Link>;
 }
 
-function InlineHref(props) {
+function NavLink(properties: { href: string; children: React.ReactNode }) {
   return (
-    <Link href={props.href}>
-      <a>{props.children}</a>
+    <Link href={properties.href}>
+      <NavButton>{properties.children}</NavButton>
     </Link>
   );
 }
 
-function NavLink(props) {
-  return (
-    <Link href={props.href}>
-      <a>
-        <NavButton className="">
-          <span className="">{props.children}</span>
-        </NavButton>
-      </a>
-    </Link>
-  );
-}
-
-function Tech(props) {
-  return <div className="inline-flex">{props.children}</div>;
+function Tech(properties: { children: React.ReactNode }) {
+  return <div className="inline-flex">{properties.children}</div>;
 }
 
 export { InlineHref, NavLink, Tech };
-export type { InLineHrefProps };

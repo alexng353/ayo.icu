@@ -1,9 +1,7 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Test({
   user = "342101128244101120",
-  privacy = true,
-  name = "alexng353",
 }: {
   user: string;
   privacy: boolean;
@@ -13,22 +11,20 @@ export default function Test({
 
   useEffect(() => {
     fetch(`https://api.lanyard.rest/v1/users/${user}`)
-      .then((res) => res.json())
+      .then((response) => response.json())
       .then((data) => {
-        console.log(data.data);
-
         setDiscord(data);
       });
     setInterval(() => {
       fetch(`https://api.lanyard.rest/v1/users/${user}`)
-        .then((res) => res.json())
+        .then((response) => response.json())
         .then((data) => {
           setDiscord(data);
         });
     }, 5000);
   }, [user]);
 
-  const pfpRef = useRef<HTMLImageElement>(null);
+  const pfpReference = useRef<HTMLImageElement>(null);
 
   const [timeLeft, setTimeLeft] = useState<string>();
   const [diff, setDiff] = useState<number>();
@@ -44,6 +40,7 @@ export default function Test({
       );
       setDiff(diff - 1000);
     }, 500);
+
     return () => clearTimeout(timeout);
   }, [diff, discord]);
 
@@ -55,12 +52,12 @@ export default function Test({
             <img
               className="rounded-full"
               onMouseOver={() => {
-                pfpRef.current.src = `https://cdn.discordapp.com/avatars/${user}/${discord.data.discord_user.avatar}.gif?size=80`;
+                pfpReference.current.src = `https://cdn.discordapp.com/avatars/${user}/${discord.data.discord_user.avatar}.gif?size=80`;
               }}
               onMouseLeave={() => {
-                pfpRef.current.src = `https://cdn.discordapp.com/avatars/${user}/${discord.data.discord_user.avatar}.webp?size=80`;
+                pfpReference.current.src = `https://cdn.discordapp.com/avatars/${user}/${discord.data.discord_user.avatar}.webp?size=80`;
               }}
-              ref={pfpRef}
+              ref={pfpReference}
               src={`https://cdn.discordapp.com/avatars/${user}/${discord.data.discord_user.avatar}.webp?size=80`}
               alt={`Avatar of ${discord.data.discord_user.username}#${discord.data.discord_user.discriminator}`}
               width={48}

@@ -1,18 +1,41 @@
-import React from "react";
+import { Typography } from "@mui/material";
 import Head from "next/head";
+import Content from "../../components/content";
 import Footer from "../../components/share/footer";
 import Navbar from "../../components/share/navbar";
-import Content from "../../components/content";
-import { Button, Typography } from "@mui/material";
 // grab loading wheel from material-ui
-import { CircularProgress, Tooltip } from "@mui/material/";
 import Link from "next/link";
-import { GreenButton } from "../../components/styled-mui";
+import { useToggle } from "usehooks-ts";
 
-function Projects() {
-  const [show, setShow] = React.useState(false);
+const CLink = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => {
+  const isExternal = href.startsWith("http");
   const linkStyles =
     "w-full border text-center px-4 py-2 border-green-500 hover:bg-green-500 rounded-lg transition-all";
+
+  if (isExternal) {
+    return (
+      <a className={linkStyles} href={href}>
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={linkStyles}>
+      {children}
+    </Link>
+  );
+};
+
+function Projects() {
+  const [showCatGif, toggleCatGif] = useToggle(false);
+
   return (
     <>
       <Head>
@@ -31,45 +54,29 @@ function Projects() {
             </p>
             <br />
             <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-              <a className={linkStyles} href="https://edubeyond.ca">
-                <span>EduBeyond</span>
-              </a>
-              <Link href="/projects/mkkl-dl">
-                <a className={linkStyles}>Mangakakalot Downloader</a>
-              </Link>
-              <Link href="/projects/typescript-generator">
-                <a className={linkStyles}>TypeScript Generator</a>
-              </Link>
-              <Link href="/projects/cf-ips">
-                <a className={linkStyles}>Cloudflare IPs</a>
-              </Link>
+              <CLink href="https://edubeyond.org">EduBeyond</CLink>
+              <CLink href="/projects/mkkl-dl">Mangakakalot Downloader</CLink>
+              <CLink href="/projects/typescript-generator">
+                TypeScript Generator
+              </CLink>
+              <CLink href="/projects/cf-ips">Cloudflare IPs</CLink>
             </div>
             <div className="grid place-items-center mt-4">
-              {show ? (
-                <>
-                  <a
-                    href="https://giphy.com/gifs/cat-WYEWpk4lRPDq0"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {/* reason for using img is  */}
-                    <img src="/giphy.webp" alt="cat" width={400} height={400} />
-                  </a>
-                  <button
-                    onClick={() => setShow(false)}
-                    className=" text-green-500 hover:bg-gray-500 rounded-lg px-4 py-2"
-                  >
-                    Hide the cat gif
-                  </button>
-                </>
-              ) : (
-                <button
-                  onClick={() => setShow(true)}
-                  className=" text-green-500 hover:bg-gray-500 rounded-lg px-4 py-2  transition-all"
+              {showCatGif && (
+                <a
+                  href="https://giphy.com/gifs/cat-WYEWpk4lRPDq0"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Show me the cat gif
-                </button>
+                  <img src="/giphy.webp" alt="cat" width={400} height={400} />
+                </a>
               )}
+              <button
+                onClick={toggleCatGif}
+                className="text-green-500 hover:bg-gray-500 rounded-lg px-4 py-2 transition-all"
+              >
+                {showCatGif ? "Hide the cat gif" : "Show me the cat gif"}
+              </button>
             </div>
           </div>
         </div>

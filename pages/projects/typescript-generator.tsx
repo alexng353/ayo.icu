@@ -58,8 +58,7 @@ export default function TypescriptGenerator() {
               - Auto generate package.json, tsconfig.json and nodemon.json
               <br />
               - Includes customizable logger
-              <br />
-              - Run your project with npm run dev
+              <br />- Run your project with npm run dev
             </Typography>
           </AccordionDetails>
         </Accordion>

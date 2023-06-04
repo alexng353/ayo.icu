@@ -20,10 +20,10 @@ import menuItems from "./menuItems.json";
 
 export default function MenuListComposition() {
   const [open, setOpen] = useState(false);
-  const anchorRef = useRef<HTMLButtonElement>(null);
+  const anchorReference = useRef<HTMLButtonElement>(null);
 
   const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
+    setOpen((previousOpen) => !previousOpen);
   };
 
   const handleClose = () => {
@@ -46,20 +46,20 @@ export default function MenuListComposition() {
   }
 
   // return focus to the button when we transitioned from !open -> open
-  const [prevOpen, setPrevOpen] = useState(open);
+  const [previousOpen, setPreviousOpen] = useState(open);
   useEffect(() => {
-    if (prevOpen === true && open === false) {
-      anchorRef.current.focus();
+    if (previousOpen === true && open === false) {
+      anchorReference.current.focus();
     }
 
-    setPrevOpen(open);
-  }, [open, prevOpen]);
+    setPreviousOpen(open);
+  }, [open, previousOpen]);
 
   return (
     <Stack direction="row" spacing={2}>
       <div>
         <MenuButton
-          ref={anchorRef}
+          ref={anchorReference}
           id="composition-button"
           aria-controls={open ? "composition-menu" : undefined}
           aria-expanded={open ? "true" : undefined}
@@ -70,7 +70,7 @@ export default function MenuListComposition() {
         </MenuButton>
         <Popper
           open={open}
-          anchorEl={anchorRef.current}
+          anchorEl={anchorReference.current}
           role={undefined}
           placement="bottom-start"
           transition
@@ -93,7 +93,7 @@ export default function MenuListComposition() {
                     onKeyDown={handleListKeyDown}
                   >
                     <MenuItem
-                      onClick={(e) => {
+                      onClick={() => {
                         // window.location.href = "/about";
                         handleClose();
                       }}
@@ -103,7 +103,7 @@ export default function MenuListComposition() {
                     {menuItems.map((item) => (
                       <MenuItem
                         key={item.title}
-                        onClick={(e) => {
+                        onClick={() => {
                           window.location.href = item.url;
                           handleClose();
                         }}
