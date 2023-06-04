@@ -94,8 +94,8 @@ function Home() {
     <>
       <Head>
         <Headers
-          title="Home | alexng353"
-          description="alexng353 | portfolio"
+          title="alexng353 | portfolio"
+          description="A portfolio of some web dev named alex"
           url="https://ayo.icu"
         />
       </Head>
