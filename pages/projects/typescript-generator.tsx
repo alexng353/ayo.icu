@@ -45,7 +45,7 @@ export default function TypescriptGenerator() {
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body1" component="p">
-              - Generate a typescript file with a single command
+              - Generate a typescript project with a single command
               <br />
               - Lightweight at 1.7 MB
               <br />
@@ -58,7 +58,8 @@ export default function TypescriptGenerator() {
               - Auto generate package.json, tsconfig.json and nodemon.json
               <br />
               - Includes customizable logger
-              <br />- Run your project with npm run dev
+              <br />
+              - Run your project with npm run dev
             </Typography>
           </AccordionDetails>
         </Accordion>

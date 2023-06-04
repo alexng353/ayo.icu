@@ -1,12 +1,9 @@
-import React from "react";
+import { Favorite } from "@mui/icons-material";
+import { Typography } from "@mui/material";
 import Head from "next/head";
+import Content from "../components/content";
 import Footer from "../components/share/footer";
 import Navbar from "../components/share/navbar";
-import Content from "../components/content";
-import { Typography } from "@mui/material";
-
-// import a heart icon from @material-ui/icons
-import { Favorite } from "@mui/icons-material";
 
 export default function About() {
   return (

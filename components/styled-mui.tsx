@@ -1,8 +1,8 @@
 import { styled } from "@mui/material/styles";
-import { ButtonUnstyled } from "@mui/base";
+import { Button } from "@mui/base";
 import { TextField } from "@mui/material";
 
-const GreenButton = styled(ButtonUnstyled)`
+const GreenButton = styled(Button)`
   font-family: IBM Plex Sans, sans-serif;
   font-size: 0.95rem;
   background-color: rgb(34 197 94);
@@ -21,7 +21,7 @@ const GreenButton = styled(ButtonUnstyled)`
   }
 `;
 // clear button, on hover background becomes gray and border becomes slightly lighter gray
-const NavButton = styled(ButtonUnstyled)`
+const NavButton = styled(Button)`
   font-family: "Roboto Mono", monospace;
   font-size: 0.95rem;
   background-color: transparent;
@@ -39,7 +39,7 @@ const NavButton = styled(ButtonUnstyled)`
   }
 `;
 //menulist button
-const GrayButton = styled(ButtonUnstyled)`
+const GrayButton = styled(Button)`
   font-family: IBM Plex Sans, sans-serif;
   font-size: 0.95rem;
   background-color: black;
@@ -87,7 +87,7 @@ const GreenTextField = styled(TextField)({
   },
 });
 
-const MenuButton = styled(ButtonUnstyled)`
+const MenuButton = styled(Button)`
   font-family: IBM Plex Sans, sans-serif;
   font-size: 0.95rem;
   background-color: rgb(34 197 94);
