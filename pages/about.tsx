@@ -4,12 +4,13 @@ import Head from "next/head";
 import Content from "../components/content";
 import Footer from "../components/share/footer";
 import Navbar from "../components/share/navbar";
+import { Headers } from "../components/headers";
 
 export default function About() {
   return (
     <>
       <Head>
-        <title>About</title>
+        <Headers title="alexng353 | about" />
       </Head>
       <Navbar />
       <Content>

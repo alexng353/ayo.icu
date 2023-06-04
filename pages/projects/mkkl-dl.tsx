@@ -10,12 +10,18 @@ import {
 } from "@mui/material";
 import { NavLink } from "../../components/reuse";
 import { RiArrowUpSFill } from "react-icons/ri";
+import { Headers } from "../../components/headers";
 
 export default function TypescriptGenerator() {
   return (
     <>
       <Head>
-        <title>Mangakakalot Downloader | alexng353</title>
+        <Headers
+          title="alexng353 | Mangakakalot Downloader"
+          description="A command-line tool to download manga from Mangakakalot."
+          image="https://raw.githubusercontent.com/alexng353/rust-mangakakalot/main/demo.png"
+          url="https://ayo.icu/projects/mkkl-dl"
+        />
       </Head>
 
       <Navbar />

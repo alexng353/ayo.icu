@@ -30,6 +30,7 @@ import { MdContactPage } from "react-icons/md";
 import { Tooltip } from "@mui/material";
 import Link from "next/link";
 import { useMemo } from "react";
+import { Headers } from "../components/headers";
 
 const HeadIcons = () => (
   <div className="inline-flex gap-3">
@@ -92,7 +93,11 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Home | alexng353</title>
+        <Headers
+          title="Home | alexng353"
+          description="alexng353 | portfolio"
+          url="https://ayo.icu"
+        />
       </Head>
       <Navbar />
       <Content>

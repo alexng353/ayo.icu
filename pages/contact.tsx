@@ -7,12 +7,13 @@ import Content from "../components/content";
 import styles from "../styles/contact.module.css";
 
 import { Button } from "@mui/material";
+import { Headers } from "../components/headers";
 
 export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact</title>
+        <Headers title="alexng353 | contact" />
       </Head>
       <Navbar />
       <Content>

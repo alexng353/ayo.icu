@@ -10,12 +10,18 @@ import {
 } from "@mui/material";
 import { NavLink } from "../../components/reuse";
 import { RiArrowUpSFill } from "react-icons/ri";
+import { Headers } from "../../components/headers";
 
 export default function TypescriptGenerator() {
   return (
     <>
       <Head>
-        <title>Typescript Generator | alexng353</title>
+        <Headers
+          title="alexng353 | Typescript Generator"
+          description="A barebones typescript project generator written in rust."
+          image="https://raw.githubusercontent.com/alexng353/typescript-generator/main/demo.png"
+          url="https://ayo.icu/projects/typescript-generator"
+        />
       </Head>
 
       <Navbar />

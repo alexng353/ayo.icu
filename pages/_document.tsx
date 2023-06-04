@@ -19,7 +19,21 @@ class MyDocument extends Document {
             <script src="https://app.embed.im/snow.js" defer></script>
           )}
           <meta
-            name="alexng353 | portfolio"
+            name="description"
+            content="A website about some web dev named Alex"
+          />
+          <meta property="og:url" content="https://ayo.icu/" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:description"
+            content="A website about some web dev named Alex"
+          />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:domain" content="ayo.icu" />
+          <meta property="twitter:url" content="https://ayo.icu/" />
+          <meta
+            name="twitter:description"
             content="A website about some web dev named Alex"
           />
           <link rel="icon" href="/favicon.ico" />

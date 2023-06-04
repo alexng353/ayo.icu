@@ -6,6 +6,7 @@ import Navbar from "../../components/share/navbar";
 // grab loading wheel from material-ui
 import Link from "next/link";
 import { useToggle } from "usehooks-ts";
+import { Headers } from "../../components/headers";
 
 const CLink = ({
   href,
@@ -39,7 +40,10 @@ function Projects() {
   return (
     <>
       <Head>
-        <title>Projects | alexng353</title>
+        <Headers
+          title="alexng353 | projects"
+          description="This is a list of projects I've worked on, which mostly consist of a list of tools I've made."
+        />
       </Head>
       <Navbar />
       <Content>
