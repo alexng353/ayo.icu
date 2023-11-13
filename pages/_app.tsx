@@ -1,9 +1,30 @@
 import "../styles/globals.css";
 
 import { AppProps } from "next/app";
+import Head from "next/head";
+import { useMemo } from "react";
+
+const useSnow = () => {
+  const date = useMemo(() => new Date(), []);
+
+  if (
+    (date.getMonth() === 10 && date.getDate() > 25) ||
+    date.getMonth() === 11 ||
+    (date.getMonth() === 0 && date.getDate() < 10)
+  ) {
+    return true;
+  }
+  return false;
+};
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  const snow = useSnow();
+  return (
+    <>
+      <Head>{snow && <script src="https://app.embed.im/snow.js" defer />}</Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;
