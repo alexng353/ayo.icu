@@ -1,3 +1,4 @@
+import MenuIcon from "@mui/icons-material/Menu";
 import {
   // Button,
   ClickAwayListener,
@@ -9,16 +10,14 @@ import {
   Stack,
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
-
 import { MenuButton } from "../styled-mui";
-
-import MenuIcon from "@mui/icons-material/Menu";
-
 import menuItems from "./menuItems.json";
+import { useRouter } from "next/router";
 
 // don't forget to make this into the json version of menulist
 
 export default function MenuListComposition() {
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const anchorReference = useRef<HTMLButtonElement>(null);
 
@@ -104,7 +103,7 @@ export default function MenuListComposition() {
                       <MenuItem
                         key={item.title}
                         onClick={() => {
-                          window.location.href = item.url;
+                          router.push(item.url);
                           handleClose();
                         }}
                       >

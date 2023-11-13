@@ -10,7 +10,7 @@ class MyDocument extends Document {
           <script
             async
             defer
-            data-website-id="bd823f41-733e-4767-9571-7a05b1b2f23f"
+            data-website-id="7e5a062e-24a4-4cab-a44c-62848758bec9"
             src="https://umami.ayo.icu/umami.js"
           ></script>
           {((this.date.getMonth() === 10 && this.date.getDate() > 25) ||
