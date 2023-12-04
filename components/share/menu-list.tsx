@@ -34,7 +34,7 @@ export default function MenuListComposition() {
   };
 
   function handleListKeyDown<T extends HTMLElement>(
-    event: React.KeyboardEvent<T>
+    event: React.KeyboardEvent<T>,
   ) {
     if (event.key === "Tab") {
       event.preventDefault();
@@ -102,8 +102,8 @@ export default function MenuListComposition() {
                     {menuItems.map((item) => (
                       <MenuItem
                         key={item.title}
-                        onClick={() => {
-                          router.push(item.url);
+                        onClick={async () => {
+                          await router.push(item.url);
                           handleClose();
                         }}
                       >

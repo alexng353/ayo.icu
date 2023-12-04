@@ -14,12 +14,18 @@ export default function Test({
       .then((response) => response.json())
       .then((data) => {
         setDiscord(data);
+      })
+      .catch((error) => {
+        console.error(error);
       });
     setInterval(() => {
       fetch(`https://api.lanyard.rest/v1/users/${user}`)
         .then((response) => response.json())
         .then((data) => {
           setDiscord(data);
+        })
+        .catch((error) => {
+          console.error(error);
         });
     }, 5000);
   }, [user]);
@@ -37,7 +43,7 @@ export default function Test({
 
     const timeout = setTimeout(() => {
       setTimeLeft(
-        `${new Date(diff).getMinutes()}:${new Date(diff).getSeconds()}`
+        `${new Date(diff).getMinutes()}:${new Date(diff).getSeconds()}`,
       );
       setDiff(diff - 1000);
     }, 500);

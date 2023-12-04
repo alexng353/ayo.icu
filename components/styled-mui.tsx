@@ -3,7 +3,9 @@ import { Button } from "@mui/base";
 import { TextField } from "@mui/material";
 
 const GreenButton = styled(Button)`
-  font-family: IBM Plex Sans, sans-serif;
+  font-family:
+    IBM Plex Sans,
+    sans-serif;
   font-size: 0.95rem;
   background-color: rgb(34 197 94);
   padding: 8px 24px;
@@ -40,7 +42,9 @@ const NavButton = styled(Button)`
 `;
 //menulist button
 const GrayButton = styled(Button)`
-  font-family: IBM Plex Sans, sans-serif;
+  font-family:
+    IBM Plex Sans,
+    sans-serif;
   font-size: 0.95rem;
   background-color: black;
   padding: 8px 24px;
@@ -88,7 +92,9 @@ const GreenTextField = styled(TextField)({
 });
 
 const MenuButton = styled(Button)`
-  font-family: IBM Plex Sans, sans-serif;
+  font-family:
+    IBM Plex Sans,
+    sans-serif;
   font-size: 0.95rem;
   background-color: rgb(34 197 94);
   padding: 6px 8px;
