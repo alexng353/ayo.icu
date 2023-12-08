@@ -1,12 +1,13 @@
+import Content from "@components/content";
+import Footer from "@components/share/footer";
+import Navbar from "@components/share/navbar";
+import { Headers } from "@components/headers";
+
 import { Typography } from "@mui/material";
 import Head from "next/head";
-import Content from "../../components/content";
-import Footer from "../../components/share/footer";
-import Navbar from "../../components/share/navbar";
-// grab loading wheel from material-ui
+import Image from "next/image";
 import Link from "next/link";
 import { useToggle } from "usehooks-ts";
-import { Headers } from "../../components/headers";
 
 const CLink = ({
   href,
@@ -43,6 +44,8 @@ function Projects() {
         <Headers
           title="alexng353 | projects"
           description="This is a list of projects I've worked on, which mostly consist of a list of tools I've made."
+          image="https://cdn.ayo.icu/assets/ayo.icu/{season}/projects.png"
+          imageAlt="Projects"
         />
       </Head>
       <Navbar />
@@ -67,13 +70,12 @@ function Projects() {
             </div>
             <div className="grid place-items-center mt-4">
               {showCatGif && (
-                <a
-                  href="https://giphy.com/gifs/cat-WYEWpk4lRPDq0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src="/giphy.webp" alt="cat" width={400} height={400} />
-                </a>
+                <Image
+                  src="https://cdn.ayo.icu/assets/ayo.icu/cat.webp"
+                  alt="cat"
+                  width={400}
+                  height={400}
+                />
               )}
               <button
                 onClick={toggleCatGif}

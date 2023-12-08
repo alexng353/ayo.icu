@@ -1,30 +1,30 @@
-import Footer from "../../components/share/footer";
-import Navbar from "../../components/share/navbar";
-import Content from "../../components/content";
-import Head from "next/head";
+import Footer from "@components/share/footer";
+import Navbar from "@components/share/navbar";
+import Content from "@components/content";
+import { NavLink } from "@components/reuse";
+import { Headers } from "@components/headers";
+
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import { NavLink } from "../../components/reuse";
 import { RiArrowUpSFill } from "react-icons/ri";
-import { Headers } from "../../components/headers";
+import Image from "next/image";
 
 export default function TypescriptGenerator() {
   return (
     <>
-      <Head>
-        <Headers
-          title="alexng353 | Mangakakalot Downloader"
-          description="A command-line tool to download manga from Mangakakalot."
-          image="/projects/mkkl-dl/demo.png"
-          url="https://ayo.icu/projects/mkkl-dl"
-        />
-      </Head>
+      <Headers
+        title="alexng353 | Mangakakalot Downloader"
+        description="A command-line tool to download manga from Mangakakalot."
+        image="https://cdn.ayo.icu/assets/ayo.icu/{season}/projects/mkkl-dl.png"
+        imageAlt="Mangakakalot Downloader"
+      />
 
       <Navbar />
+
       <Content>
         <div className="flex justify-center ">
           <Typography variant="h4" component="h4">
@@ -90,7 +90,7 @@ export default function TypescriptGenerator() {
               https://mangakakalot.com/read-wg9rm158504883358
             </pre>
           </span>
-          <img
+          <Image
             src="/projects/mkkl-dl/demo.png"
             alt="demo"
             width={557}

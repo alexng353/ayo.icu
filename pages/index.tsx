@@ -1,8 +1,13 @@
-import Head from "next/head";
-import Content from "../components/content";
-import { ListItem } from "../components/list-item";
-import Footer from "../components/share/footer";
-import Navbar from "../components/share/navbar";
+import Content from "@components/content";
+import { ListItem } from "@components/list-item";
+import Footer from "@components/share/footer";
+import Navbar from "@components/share/navbar";
+import { Headers } from "@components/headers";
+import { HeadIcons } from "@components/home/head-icons";
+import { useSnow } from "@hooks/use-snow";
+
+import Image from "next/image";
+import Link from "next/link";
 
 import {
   SiDocker,
@@ -10,7 +15,6 @@ import {
   SiGit,
   SiGithub,
   SiGithubactions,
-  SiLinkedin,
   SiMongodb,
   SiNextdotjs as SiNextDotJs,
   SiNodedotjs as SiNodeDotJs,
@@ -21,84 +25,25 @@ import {
   SiRedis,
   SiRust,
   SiTailwindcss,
-  SiTwitter,
   SiTypescript,
 } from "react-icons/si";
+import { AiOutlineClose } from "react-icons/ai";
 
-import { MdContactPage } from "react-icons/md";
-
-import { Tooltip } from "@mui/material";
-import Link from "next/link";
+import { useIsClient, useLocalStorage } from "usehooks-ts";
 import { useMemo } from "react";
-import { Headers } from "../components/headers";
 
-const HeadIcons = () => (
-  <div className="inline-flex gap-3">
-    <Tooltip title="Github">
-      <a
-        href="https://github.com/alexng353"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SiGithub
-          style={{ color: "white" }}
-          className="h-6 w-6 hover:scale-110 transition-all ease-in-out"
-        />
-      </a>
-    </Tooltip>
-    <Tooltip title="Twitter">
-      <a
-        href="https://twitter.com/alexng353"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SiTwitter
-          style={{ color: "white" }}
-          className="h-6 w-6 hover:scale-110 transition-all ease-in-out"
-        />
-      </a>
-    </Tooltip>
-    <Tooltip title="LinkedIn">
-      <a
-        href="https://www.linkedin.com/in/alexng353/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SiLinkedin
-          style={{ color: "white" }}
-          className="h-6 w-6 hover:scale-110 transition-all ease-in-out"
-        />
-      </a>
-    </Tooltip>
-    <Tooltip title="Contact">
-      <Link href="/contact">
-        <MdContactPage
-          style={{ color: "white", position: "relative", top: "-2" }}
-          className="h-7 w-7 hover:scale-110 transition-all ease-in-out"
-        />
-      </Link>
-    </Tooltip>
-  </div>
-);
 function Home() {
-  const show = useMemo(() => {
-    const date = new Date();
-    return (
-      (date.getMonth() === 10 && date.getDate() > 25) ||
-      date.getMonth() === 11 ||
-      (date.getMonth() === 0 && date.getDate() < 10)
-    );
-  }, []);
-
   return (
     <>
-      <Head>
-        <Headers
-          title="alexng353 | portfolio"
-          description="A portfolio of some web dev named alex"
-          url="https://ayo.icu"
-        />
-      </Head>
+      <Headers
+        title="alexng353 | portfolio"
+        description="A portfolio of some web dev named alex"
+        image="https://cdn.ayo.icu/assets/ayo.icu/{season}/home.png"
+        imageAlt="Home page of alexng353's portfolio"
+      />
+
+      <SnowBanner />
+
       <Navbar />
       <Content>
         <HeadIcons />
@@ -107,7 +52,7 @@ function Home() {
         <div className="flex flex-col gap-4">
           <p className="pt-3">
             A 17 year old Full Stack web developer based in{" "}
-            <span className="text-fuchsia-500">Vancouver, Canada.</span>
+            <span className="text-fuchsia-500">Vancouver, Canada. </span>
             I&apos;m currently working as a{" "}
             <a
               href="https://www.edubeyond.org"
@@ -167,14 +112,6 @@ function Home() {
           <MySQL />
           <Tauri />
         </ul>
-        {show && (
-          <a
-            href="https://embed.im/snow/"
-            className="absolute bottom-20 right-20 text-white hover:underline bg-green-500 rounded-lg px-4 py-2"
-          >
-            snow effect from embed.im/snow
-          </a>
-        )}
       </Content>
       <Footer />
     </>
@@ -186,7 +123,13 @@ export default Home;
 const Tauri = () => (
   <li className="flex space-x-2 items-center">
     <span>
-      <img src="/tauri.png" alt="tauri" className="h-8 w-8 select-none" />
+      <Image
+        width={32}
+        height={32}
+        src="/tauri.png"
+        alt="tauri"
+        className="h-8 w-8 select-none"
+      />
     </span>
     <span>Tauri</span>
   </li>
@@ -195,8 +138,50 @@ const Tauri = () => (
 const MySQL = () => (
   <li className="flex space-x-2 items-center">
     <span>
-      <img src="/MySQL.png" alt="MySQL" className="h-8 w-8 select-none" />
+      <Image
+        width={32}
+        height={32}
+        src="/MySQL.png"
+        alt="MySQL"
+        className="h-8 w-8 select-none"
+      />
     </span>
     <span>MySQL</span>
   </li>
 );
+
+const SnowBanner = () => {
+  const snow = useSnow();
+  const dateFmt = useMemo(
+    () =>
+      new Date().toLocaleDateString("en-CA", {
+        year: "numeric",
+        month: "numeric",
+      }),
+    [],
+  );
+  const [showBanner, setShowBanner] = useLocalStorage(`snow-${dateFmt}`, true);
+  const client = useIsClient();
+
+  if (!client) return;
+  if (!snow) return;
+  if (!showBanner) return;
+
+  return (
+    <div className="flex flex-row w-full justify-center bg-green-500">
+      <a
+        href="https://embed.im/snow/"
+        className="text-white text-center hover:underline px-4 py-2"
+      >
+        snow effect from embed.im/snow
+      </a>
+
+      <button
+        onClick={() => setShowBanner(false)}
+        className="text-white text-center hover:underline px-4 py-2"
+      >
+        <AiOutlineClose className="hover:scale-125" />
+      </button>
+    </div>
+  );
+};

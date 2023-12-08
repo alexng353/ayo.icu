@@ -11,24 +11,14 @@ class MyDocument extends Document {
             data-website-id="7e5a062e-24a4-4cab-a44c-62848758bec9"
             src="https://umami.ayo.icu/umami.js"
           ></script>
-          <meta
-            name="description"
-            content="A website about some web dev named Alex"
-          />
-          <meta property="og:url" content="https://ayo.icu/" />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:description"
-            content="A website about some web dev named Alex"
-          />
 
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta property="twitter:domain" content="ayo.icu" />
-          <meta property="twitter:url" content="https://ayo.icu/" />
-          <meta
-            name="twitter:description"
-            content="A website about some web dev named Alex"
-          />
+          <meta name="theme-color" content="#000000" />
+          <meta property="og:type" content="website" />
+          <meta charSet="utf-8" />
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="shortcut icon" href="/favicon.png" />
+          <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon.png" />
+
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>

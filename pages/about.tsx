@@ -1,17 +1,19 @@
 import { Favorite } from "@mui/icons-material";
 import { Typography } from "@mui/material";
-import Head from "next/head";
-import Content from "../components/content";
-import Footer from "../components/share/footer";
-import Navbar from "../components/share/navbar";
-import { Headers } from "../components/headers";
+import Content from "@components/content";
+import Footer from "@components/share/footer";
+import Navbar from "@components/share/navbar";
+import { Headers } from "@components/headers";
 
 export default function About() {
   return (
     <>
-      <Head>
-        <Headers title="alexng353 | about" />
-      </Head>
+      <Headers
+        title="alexng353 | about"
+        description="About me (somewhat)"
+        image="https://cdn.ayo.icu/assets/ayo.icu/{season}/about.png"
+        imageAlt="About me"
+      />
       <Navbar />
       <Content>
         <div className="text-center">

@@ -1,28 +1,27 @@
+import Content from "@components/content";
+import { NavLink } from "@components/reuse";
+import Footer from "@components/share/footer";
+import Navbar from "@components/share/navbar";
+import { Headers } from "@components/headers";
+
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import Head from "next/head";
 import { RiArrowUpSFill } from "react-icons/ri";
-import Content from "../../components/content";
-import { NavLink } from "../../components/reuse";
-import Footer from "../../components/share/footer";
-import Navbar from "../../components/share/navbar";
-import { Headers } from "../../components/headers";
+import Image from "next/image";
 
 export default function TypescriptGenerator({ ips }: { ips: string[] }) {
   return (
     <>
-      <Head>
-        <Headers
-          title="alexng353 | Cloudflare IP Range Grabber"
-          description="A very simple tool to grab the Cloudflare IP range from the Cloudflare website and parse it into a nginx compatible format."
-          image="https://raw.githubusercontent.com/alexng353/cf-ips/main/demo.png"
-          url="https://ayo.icu/projects/cf-ips"
-        />
-      </Head>
+      <Headers
+        title="alexng353 | Cloudflare IP Range Grabber"
+        description="A very simple tool to grab the Cloudflare IP range from the Cloudflare website and parse it into a nginx compatible format."
+        image="https://cdn.ayo.icu/assets/ayo.icu/{season}/projects/cf-ips.png"
+        imageAlt="Cloudflare IP Range Grabber"
+      />
 
       <Navbar />
       <Content>
@@ -64,7 +63,7 @@ export default function TypescriptGenerator({ ips }: { ips: string[] }) {
           </AccordionDetails>
         </Accordion>
 
-        <img src="/projects/cf-ips/demo.png" alt="demo" />
+        <Image src="/projects/cf-ips/demo.png" alt="demo" />
         {/* not to self: write some documentation and clean up the codebase */}
         {/* <Accordion>
           <AccordionSummary expandIcon={<RiArrowUpSFill />}>

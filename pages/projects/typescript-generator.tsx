@@ -1,28 +1,27 @@
-import Footer from "../../components/share/footer";
-import Navbar from "../../components/share/navbar";
-import Content from "../../components/content";
-import Head from "next/head";
+import Footer from "@components/share/footer";
+import Navbar from "@components/share/navbar";
+import Content from "@components/content";
+import { NavLink } from "@components/reuse";
+import { Headers } from "@components/headers";
+
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import { NavLink } from "../../components/reuse";
 import { RiArrowUpSFill } from "react-icons/ri";
-import { Headers } from "../../components/headers";
+import Image from "next/image";
 
 export default function TypescriptGenerator() {
   return (
     <>
-      <Head>
-        <Headers
-          title="alexng353 | Typescript Generator"
-          description="A barebones typescript project generator written in rust."
-          image="https://raw.githubusercontent.com/alexng353/typescript-generator/main/demo.png"
-          url="https://ayo.icu/projects/typescript-generator"
-        />
-      </Head>
+      <Headers
+        title="alexng353 | Typescript Generator"
+        description="A barebones typescript project generator written in rust."
+        image="https://cdn.ayo.icu/assets/ayo.icu/{season}/projects/typescript-generator.png"
+        imageAlt="Typescript Generator"
+      />
 
       <Navbar />
       <Content>
@@ -69,7 +68,7 @@ export default function TypescriptGenerator() {
           </AccordionDetails>
         </Accordion>
 
-        <img
+        <Image
           src="/projects/typescript-generator/demo.png"
           alt="demo"
           width={1602}

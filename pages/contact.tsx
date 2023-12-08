@@ -1,20 +1,24 @@
-import React from "react";
-import Head from "next/head";
-import Footer from "../components/share/footer";
-import Navbar from "../components/share/navbar";
-import Content from "../components/content";
+import Footer from "@components/share/footer";
+import Navbar from "@components/share/navbar";
+import Content from "@components/content";
+import { Headers } from "@components/headers";
 
-import styles from "../styles/contact.module.css";
+import styles from "@styles/contact.module.css";
 
 import { Button } from "@mui/material";
-import { Headers } from "../components/headers";
+import { useRouter } from "next/router";
 
 export default function Contact() {
+  const router = useRouter();
   return (
     <>
-      <Head>
-        <Headers title="alexng353 | contact" />
-      </Head>
+      <Headers
+        title="alexng353 | contact"
+        description="How to contact me"
+        image="https://cdn.ayo.icu/assets/ayo.icu/{season}/contact.png"
+        imageAlt="Contact me"
+      />
+
       <Navbar />
       <Content>
         {/* make the button small */}
@@ -27,8 +31,7 @@ export default function Contact() {
         <div className="flex justify-center">
           <Button
             onClick={() => {
-              // redirect to the last page of the browser
-              window.location.href = "/";
+              void router.push("/");
             }}
             variant="contained"
           >
