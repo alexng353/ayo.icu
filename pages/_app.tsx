@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head>{snow && <script src="https://app.embed.im/snow.js" defer />}</Head>
+      {/*<Head>{snow && <script src="https://app.embed.im/snow.js" defer />}</Head>*/}
       <Component {...pageProps} />
     </>
   );
