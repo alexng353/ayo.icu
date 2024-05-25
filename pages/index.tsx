@@ -51,7 +51,7 @@ function Home() {
         <h1 className="text-4xl tracking-wide">Alexander Ng</h1>
         <div className="flex flex-col gap-4">
           <p className="pt-3">
-            A 17 year old Full Stack web developer based in{" "}
+            An 18-year-old Full Stack web developer based in{" "}
             <span className="text-fuchsia-500">Vancouver, Canada. </span>
             I&apos;m currently working as a{" "}
             <a
@@ -67,7 +67,7 @@ function Home() {
           </p>
           <p>
             In my spare time, I like to build stuff, play games, and learn new
-            things, which currently include Rust, and MongoDB, though my
+            things, which currently include Rust and MongoDB, though my
             favourite database right now is PostgreSQL. I&apos;m also learning
             Docker and Prisma.
           </p>
@@ -127,7 +127,7 @@ const Tauri = () => (
         width={32}
         height={32}
         src="/tauri.png"
-        alt="tauri"
+        alt="Tauri"
         className="h-8 w-8 select-none"
       />
     </span>
