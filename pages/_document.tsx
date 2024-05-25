@@ -9,7 +9,7 @@ class MyDocument extends Document {
             async
             defer
             data-website-id="7e5a062e-24a4-4cab-a44c-62848758bec9"
-            src="https://umami.ayo.icu/umami.js"
+            src="https://umami.ayo.icu/script.js"
           ></script>
 
           <meta name="theme-color" content="#000000" />
