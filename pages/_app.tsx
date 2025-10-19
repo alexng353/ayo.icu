@@ -1,11 +1,10 @@
 import "../styles/globals.css";
 
 import { useSnow } from "hooks/use-snow";
-import { AppProps } from "next/app";
-import Head from "next/head";
+import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const snow = useSnow();
+  const _snow = useSnow();
 
   return (
     <>

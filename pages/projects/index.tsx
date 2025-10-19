@@ -1,7 +1,7 @@
 import Content from "@components/content";
+import { Headers } from "@components/headers";
 import Footer from "@components/share/footer";
 import Navbar from "@components/share/navbar";
-import { Headers } from "@components/headers";
 
 import { Typography } from "@mui/material";
 import Head from "next/head";
@@ -78,6 +78,7 @@ function Projects() {
                 />
               )}
               <button
+                type="button"
                 onClick={toggleCatGif}
                 className="text-green-500 hover:bg-gray-500 rounded-lg px-4 py-2 transition-all"
               >

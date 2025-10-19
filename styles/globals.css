@@ -1,8 +1,10 @@
+/** biome-ignore-all lint/suspicious/noUnknownAtRules: tailwind */
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 html {
   background-color: #000;

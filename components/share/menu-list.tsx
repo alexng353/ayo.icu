@@ -9,10 +9,10 @@ import {
   Popper,
   Stack,
 } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useId, useRef, useState } from "react";
 import { MenuButton } from "../styled-mui";
 import menuItems from "./menuItems.json";
-import { useRouter } from "next/router";
 
 // don't forget to make this into the json version of menulist
 
@@ -59,7 +59,7 @@ export default function MenuListComposition() {
       <div>
         <MenuButton
           ref={anchorReference}
-          id="composition-button"
+          id={useId()}
           aria-controls={open ? "composition-menu" : undefined}
           aria-expanded={open ? "true" : undefined}
           aria-haspopup="true"
@@ -70,7 +70,6 @@ export default function MenuListComposition() {
         <Popper
           open={open}
           anchorEl={anchorReference.current}
-          role={undefined}
           placement="bottom-start"
           transition
           disablePortal
@@ -87,7 +86,6 @@ export default function MenuListComposition() {
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList
                     autoFocusItem={open}
-                    id="composition-menu"
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
                   >

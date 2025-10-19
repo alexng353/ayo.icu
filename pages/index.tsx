@@ -1,14 +1,15 @@
 import Content from "@components/content";
+import { Headers } from "@components/headers";
+import { HeadIcons } from "@components/home/head-icons";
 import { ListItem } from "@components/list-item";
 import Footer from "@components/share/footer";
 import Navbar from "@components/share/navbar";
-import { Headers } from "@components/headers";
-import { HeadIcons } from "@components/home/head-icons";
 import { useSnow } from "@hooks/use-snow";
 
 import Image from "next/image";
 import Link from "next/link";
-
+import { useMemo } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 import {
   SiDocker,
   SiExpress,
@@ -27,10 +28,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
-import { AiOutlineClose } from "react-icons/ai";
-
 import { useIsClient, useLocalStorage } from "usehooks-ts";
-import { useMemo } from "react";
 
 function Home() {
   return (
@@ -177,6 +175,7 @@ const SnowBanner = () => {
       </a>
 
       <button
+        type="button"
         onClick={() => setShowBanner(false)}
         className="text-white text-center hover:underline px-4 py-2"
       >

@@ -3,7 +3,7 @@
 import { useSnow } from "hooks/use-snow";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React from "react";
+import type React from "react";
 
 type HeadersProperties = {
   title?: string;
@@ -89,7 +89,7 @@ export function _Headers({
 }
 
 const ellipsis = (text: string, length: number) =>
-  text.length > length ? text.slice(0, Math.max(0, length - 3)) + "..." : text;
+  text.length > length ? `${text.slice(0, Math.max(0, length - 3))}...` : text;
 
 function ClientOnly() {
   const router = useRouter();

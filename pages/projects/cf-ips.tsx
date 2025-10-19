@@ -1,8 +1,8 @@
 import Content from "@components/content";
+import { Headers } from "@components/headers";
 import { NavLink } from "@components/reuse";
 import Footer from "@components/share/footer";
 import Navbar from "@components/share/navbar";
-import { Headers } from "@components/headers";
 
 import {
   Accordion,
@@ -10,8 +10,8 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import { RiArrowUpSFill } from "react-icons/ri";
 import Image from "next/image";
+import { RiArrowUpSFill } from "react-icons/ri";
 
 export default function TypescriptGenerator({ ips }: { ips: string[] }) {
   return (

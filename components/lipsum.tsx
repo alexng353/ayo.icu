@@ -12,15 +12,15 @@ function LoremIpsum() {
           setShowMessage(!showMessage);
         }}
       >
-        {" "}
-        toggle{" "}
+        toggle
       </Button>
       {showMessage && (
         <div>
           {Lipsum.lipsum.map((item, index) => {
             return (
+              // biome-ignore lint/suspicious/noArrayIndexKey: ignore
               <div key={index}>
-                <p key={index}>{item}</p> <br />{" "}
+                <p>{item}</p> <br />{" "}
               </div>
             );
           })}

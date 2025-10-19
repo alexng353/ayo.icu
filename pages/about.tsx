@@ -1,9 +1,9 @@
-import { Favorite } from "@mui/icons-material";
-import { Typography } from "@mui/material";
 import Content from "@components/content";
+import { Headers } from "@components/headers";
 import Footer from "@components/share/footer";
 import Navbar from "@components/share/navbar";
-import { Headers } from "@components/headers";
+import { Favorite } from "@mui/icons-material";
+import { Typography } from "@mui/material";
 
 export default function About() {
   return (

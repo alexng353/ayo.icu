@@ -1,8 +1,8 @@
+import Content from "@components/content";
+import { Headers } from "@components/headers";
+import { NavLink } from "@components/reuse";
 import Footer from "@components/share/footer";
 import Navbar from "@components/share/navbar";
-import Content from "@components/content";
-import { NavLink } from "@components/reuse";
-import { Headers } from "@components/headers";
 
 import {
   Accordion,
@@ -10,8 +10,8 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import { RiArrowUpSFill } from "react-icons/ri";
 import Image from "next/image";
+import { RiArrowUpSFill } from "react-icons/ri";
 
 export default function TypescriptGenerator() {
   return (
@@ -67,18 +67,12 @@ export default function TypescriptGenerator() {
           <AccordionDetails>
             <Typography variant="body1" component="p">
               - Download from mangakakalot with a single command
-              <br />
-              - Lightweight at 6 MB (windows)
-              <br />
-              - It&apos;s an executable, so no need to install rust
-              <br />
-              - MIT Licensed, do as you please with the source
-              <br />
-              - Supports downloading between a range
-              <br />
-              - Supports downloading by chapter name
-              <br />
-              - Supports downloading by chapter number
+              <br />- Lightweight at 6 MB (windows)
+              <br />- It&apos;s an executable, so no need to install rust
+              <br />- MIT Licensed, do as you please with the source
+              <br />- Supports downloading between a range
+              <br />- Supports downloading by chapter name
+              <br />- Supports downloading by chapter number
               <br />- Supports downloading all chapters after a certain chapter
             </Typography>
           </AccordionDetails>

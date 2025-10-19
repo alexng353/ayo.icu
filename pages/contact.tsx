@@ -1,11 +1,9 @@
-import Footer from "@components/share/footer";
-import Navbar from "@components/share/navbar";
 import Content from "@components/content";
 import { Headers } from "@components/headers";
-
-import styles from "@styles/contact.module.css";
-
+import Footer from "@components/share/footer";
+import Navbar from "@components/share/navbar";
 import { Button } from "@mui/material";
+import styles from "@styles/contact.module.css";
 import { useRouter } from "next/router";
 
 export default function Contact() {

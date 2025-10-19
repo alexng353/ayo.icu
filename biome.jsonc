@@ -1,0 +1,18 @@
+{
+  "files": {
+    "includes": [
+      "hooks/**/*.{js,ts,jsx,tsx}",
+      "components/**/*.{js,ts,jsx,tsx}",
+      "pages/**/*.{js,ts,jsx,tsx}",
+      "styles/**/*.{js,ts,jsx,tsx,css}",
+      "package.json",
+      "biome.jsonc",
+      "tailwind.config.js",
+      "postcss.config.js"
+    ]
+  },
+  "formatter": {
+    "indentStyle": "space", // default is `tab`
+    "lineWidth": 80
+  }
+}

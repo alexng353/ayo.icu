@@ -1,8 +1,8 @@
+import Content from "@components/content";
+import { Headers } from "@components/headers";
+import { NavLink } from "@components/reuse";
 import Footer from "@components/share/footer";
 import Navbar from "@components/share/navbar";
-import Content from "@components/content";
-import { NavLink } from "@components/reuse";
-import { Headers } from "@components/headers";
 
 import {
   Accordion,
@@ -10,8 +10,8 @@ import {
   AccordionSummary,
   Typography,
 } from "@mui/material";
-import { RiArrowUpSFill } from "react-icons/ri";
 import Image from "next/image";
+import { RiArrowUpSFill } from "react-icons/ri";
 
 export default function TypescriptGenerator() {
   return (
@@ -51,18 +51,12 @@ export default function TypescriptGenerator() {
           <AccordionDetails>
             <Typography variant="body1" component="p">
               - Generate a typescript project with a single command
-              <br />
-              - Lightweight at 1.3 MB (windows)
-              <br />
-              - Auto install dependencies
-              <br />
-              - Auto generate MIT license
-              <br />
-              - Auto generate README.md
-              <br />
-              - Auto generate package.json, tsconfig.json and nodemon.json
-              <br />
-              - Includes customizable logger
+              <br />- Lightweight at 1.3 MB (windows)
+              <br />- Auto install dependencies
+              <br />- Auto generate MIT license
+              <br />- Auto generate README.md
+              <br />- Auto generate package.json, tsconfig.json and nodemon.json
+              <br />- Includes customizable logger
               <br />- Run your project with npm run dev
             </Typography>
           </AccordionDetails>
