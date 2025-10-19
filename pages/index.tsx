@@ -34,7 +34,7 @@ function Home() {
   return (
     <>
       <Headers
-        title="alexng353 | portfolio"
+        title="Alexander Ng | portfolio"
         description="A portfolio of some web dev named alex"
         image="https://cdn.ayo.icu/assets/ayo.icu/{season}/home.png"
         imageAlt="Home page of alexng353's portfolio"

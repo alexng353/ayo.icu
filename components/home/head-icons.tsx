@@ -1,7 +1,7 @@
 import { Tooltip } from "@mui/material";
 import Link from "next/link";
 import { MdContactPage } from "react-icons/md";
-import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 export const HeadIcons = () => (
   <div className="inline-flex gap-3">
@@ -12,18 +12,6 @@ export const HeadIcons = () => (
         rel="noopener noreferrer"
       >
         <SiGithub
-          style={{ color: "white" }}
-          className="h-6 w-6 hover:scale-110 transition-all ease-in-out"
-        />
-      </a>
-    </Tooltip>
-    <Tooltip title="Twitter">
-      <a
-        href="https://twitter.com/alexng353"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SiTwitter
           style={{ color: "white" }}
           className="h-6 w-6 hover:scale-110 transition-all ease-in-out"
         />

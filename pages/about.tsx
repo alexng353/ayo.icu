@@ -9,8 +9,8 @@ export default function About() {
   return (
     <>
       <Headers
-        title="alexng353 | about"
-        description="About me (somewhat)"
+        title="Alexander Ng | about"
+        description="About me"
         image="https://cdn.ayo.icu/assets/ayo.icu/{season}/about.png"
         imageAlt="About me"
       />

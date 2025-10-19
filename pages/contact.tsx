@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <>
       <Headers
-        title="alexng353 | contact"
+        title="Alexander Ng | contact"
         description="How to contact me"
         image="https://cdn.ayo.icu/assets/ayo.icu/{season}/contact.png"
         imageAlt="Contact me"
@@ -21,7 +21,7 @@ export default function Contact() {
       <Content>
         {/* make the button small */}
         You can contact me at{" "}
-        <a href="mailto:alex@ayo.icu" className={styles.link}>
+        <a href="mailto:alex@ngland.net" className={styles.link}>
           alex@ayo.icu
         </a>
         <br />

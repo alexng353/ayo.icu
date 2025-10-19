@@ -17,7 +17,7 @@ export default function TypescriptGenerator({ ips }: { ips: string[] }) {
   return (
     <>
       <Headers
-        title="alexng353 | Cloudflare IP Range Grabber"
+        title="Alexander Ng | Cloudflare IP Range Grabber"
         description="A very simple tool to grab the Cloudflare IP range from the Cloudflare website and parse it into a nginx compatible format."
         image="https://cdn.ayo.icu/assets/ayo.icu/{season}/projects/cf-ips.png"
         imageAlt="Cloudflare IP Range Grabber"

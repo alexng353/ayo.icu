@@ -42,7 +42,7 @@ function Projects() {
     <>
       <Head>
         <Headers
-          title="alexng353 | projects"
+          title="Alexander Ng | projects"
           description="This is a list of projects I've worked on, which mostly consist of a list of tools I've made."
           image="https://cdn.ayo.icu/assets/ayo.icu/{season}/projects.png"
           imageAlt="Projects"
@@ -61,7 +61,8 @@ function Projects() {
             </p>
             <br />
             <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-              <CLink href="https://edubeyond.org">EduBeyond</CLink>
+              <CLink href="https://futurity.work">Futurity</CLink>
+              <CLink href="/projects/envx">Envx</CLink>
               <CLink href="/projects/mkkl-dl">Mangakakalot Downloader</CLink>
               <CLink href="/projects/typescript-generator">
                 TypeScript Generator
