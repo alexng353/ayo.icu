@@ -25,13 +25,13 @@ type HeadersProperties = {
 
 export function Headers(props: HeadersProperties) {
   if (typeof window === "undefined") {
-    return <_Headers {...props} client={false} />;
+    return <HeadersInternal {...props} client={false} />;
   }
 
-  return <_Headers {...props} client={true} />;
+  return <HeadersInternal {...props} client={true} />;
 }
 
-export function _Headers({
+export function HeadersInternal({
   title,
   description,
   site_name,
