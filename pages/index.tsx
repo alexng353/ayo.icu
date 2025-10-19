@@ -49,7 +49,7 @@ function Home() {
         <h1 className="text-4xl tracking-wide">Alexander Ng</h1>
         <div className="flex flex-col gap-4">
           <p className="pt-3">
-            An 18-year-old Full Stack web developer based in{" "}
+            An 19-year-old Full Stack web developer based in{" "}
             <span className="text-fuchsia-500">Vancouver, Canada. </span>
             I&apos;m currently working as a{" "}
             <a
