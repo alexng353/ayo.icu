@@ -53,21 +53,20 @@ function Home() {
             <span className="text-fuchsia-500">Vancouver, Canada. </span>
             I&apos;m currently working as a{" "}
             <a
-              href="https://www.edubeyond.org"
+              href="https://futurity.work"
               className="text-green-400 hover:underline"
             >
-              Software Engineer at EduBeyond
+              Founding Software Engineer at Futurity
             </a>
-            , an international edtech startup that provides education
-            opportunities to children in developing countries. Primarily, I
-            write a lot of TypeScript, React and Next, but I also have some
-            experience with Rust, Python, and GoLang.
+            , an international AI startup providing enterprise on-premise AI
+            deployments, integrations and plugins for clients around the world.
+            Primarily, I write a lot of TypeScript, React and Next, but I also
+            have some experience with Rust, Python, and GoLang.
           </p>
           <p>
             In my spare time, I like to build stuff, play games, and learn new
-            things, which currently include Rust and MongoDB, though my
-            favourite database right now is PostgreSQL. I&apos;m also learning
-            Docker and Prisma.
+            things, which currently include Kubernetes and WASM, I&apos;m also
+            learning mobile development in Tauri.
           </p>
         </div>
         <div className="mt-4">
